@@ -1,0 +1,174 @@
+#u1495
+{
+	border-color: #000000;
+	position: relative;
+	background: #070103 url("../../images/fondo2.jpg") no-repeat center center;
+	background-size: cover !important;
+}
+
+#u1496
+{
+	position: relative;
+}
+
+#u3022-34
+{
+	letter-spacing: 1px;
+	color: #F2EDDD;
+	font-family: Trebuchet, Trebuchet MS, Tahoma, Arial, sans-serif;
+	position: relative;
+}
+
+#u3022-4,#u3022-6,#u3022-10,#u3022-12,#u3022-13,#u3022-18,#u3022-19
+{
+	font-size: 15px;
+	line-height: 23px;
+}
+
+#u3022-24,#u3022-28,#u3022-32
+{
+	font-size: 21px;
+	line-height: 32px;
+}
+
+#u1499-4
+{
+	background-color: transparent;
+	letter-spacing: 2px;
+	line-height: 18px;
+	color: #F8F5ED;
+	font-size: 15px;
+	font-family: Trebuchet, Trebuchet MS, Tahoma, Arial, sans-serif;
+	position: relative;
+}
+
+#u1504
+{
+	background-color: transparent;
+	opacity: 0.95;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=95)";
+	filter: alpha(opacity=95);
+	position: relative;
+}
+
+#u1504:hover
+{
+	opacity: 0.55;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=55.00000000000001)";
+	filter: alpha(opacity=55.00000000000001);
+}
+
+#u1500-4
+{
+	background-color: transparent;
+	letter-spacing: 2px;
+	line-height: 18px;
+	color: #F8F5ED;
+	font-size: 15px;
+	font-family: Trebuchet, Trebuchet MS, Tahoma, Arial, sans-serif;
+	position: relative;
+}
+
+#u1501-4
+{
+	background-color: transparent;
+	letter-spacing: 2px;
+	line-height: 18px;
+	color: #F8F5ED;
+	font-size: 15px;
+	font-family: Trebuchet, Trebuchet MS, Tahoma, Arial, sans-serif;
+	position: relative;
+}
+
+#u1502-4
+{
+	background-color: transparent;
+	letter-spacing: 2px;
+	line-height: 18px;
+	color: #F8F5ED;
+	font-size: 15px;
+	font-family: Trebuchet, Trebuchet MS, Tahoma, Arial, sans-serif;
+	position: relative;
+}
+
+#u1503-4
+{
+	background-color: transparent;
+	letter-spacing: 2px;
+	line-height: 18px;
+	color: #F8F5ED;
+	font-size: 15px;
+	font-family: Trebuchet, Trebuchet MS, Tahoma, Arial, sans-serif;
+	position: relative;
+}
+
+#u1499-4:hover p,#u1500-4:hover p,#u1501-4:hover p,#u1502-4:hover p,#u1503-4:hover p
+{
+	text-decoration: underline;
+}
+
+#u1512
+{
+	border-style: solid;
+	border-color: #F2EDDD;
+	background-color: transparent;
+	position: relative;
+	border-width: 0px 0px 1px;
+}
+
+#u1513-9
+{
+	text-align: center;
+	line-height: 18px;
+	color: #F8F5ED;
+	position: relative;
+}
+
+#u1513-2
+{
+	font-weight: bold;
+}
+
+#u1513-7
+{
+	line-height: 0px;/* 0 for mixed font sized paras; applied on spans instead */
+}
+
+#u3022,#u3022-7,#u3022-14,#u3022-20,#u3022-25,#u3022-29,#u1513-3
+{
+	font-size: 1px;
+	line-height: 0px;
+}
+
+#u3027_img,#u5846_img,#u3030_img,#u3024_img,#u3033_img,#u3036_img,#u1515_img
+{
+	vertical-align: bottom;
+}
+
+#u1513-5
+{
+	line-height: 18px;
+}
+
+#u1513-6
+{
+	font-size: 12px;
+	line-height: 16px;
+}
+
+#u1517
+{
+	background-color: transparent;
+	opacity: 0.28;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=28.000000000000004)";
+	filter: alpha(opacity=28.000000000000004);
+	position: relative;
+}
+
+#u1517:hover
+{
+	opacity: 1;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+}
+

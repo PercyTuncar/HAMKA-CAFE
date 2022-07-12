@@ -1,0 +1,174 @@
+#u1061
+{
+	border-color: #000000;
+	position: relative;
+	background: #070103 url("../../images/fondo2.jpg") no-repeat center center;
+	background-size: cover !important;
+}
+
+#u1062
+{
+	position: relative;
+}
+
+#u1065-4
+{
+	background-color: transparent;
+	letter-spacing: 2px;
+	line-height: 18px;
+	color: #F8F5ED;
+	font-size: 15px;
+	font-family: Trebuchet, Trebuchet MS, Tahoma, Arial, sans-serif;
+	position: relative;
+}
+
+#u1070
+{
+	background-color: transparent;
+	opacity: 0.95;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=95)";
+	filter: alpha(opacity=95);
+	position: relative;
+}
+
+#u1070:hover
+{
+	opacity: 0.55;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=55.00000000000001)";
+	filter: alpha(opacity=55.00000000000001);
+}
+
+#u1066-4
+{
+	background-color: transparent;
+	letter-spacing: 2px;
+	line-height: 18px;
+	color: #F8F5ED;
+	font-size: 15px;
+	font-family: Trebuchet, Trebuchet MS, Tahoma, Arial, sans-serif;
+	position: relative;
+}
+
+#u1067-4
+{
+	background-color: transparent;
+	letter-spacing: 2px;
+	line-height: 18px;
+	color: #F8F5ED;
+	font-size: 15px;
+	font-family: Trebuchet, Trebuchet MS, Tahoma, Arial, sans-serif;
+	position: relative;
+}
+
+#u1068-4
+{
+	background-color: transparent;
+	letter-spacing: 2px;
+	line-height: 18px;
+	color: #F8F5ED;
+	font-size: 15px;
+	font-family: Trebuchet, Trebuchet MS, Tahoma, Arial, sans-serif;
+	position: relative;
+}
+
+#u1069-4
+{
+	background-color: transparent;
+	letter-spacing: 2px;
+	line-height: 18px;
+	color: #F8F5ED;
+	font-size: 15px;
+	font-family: Trebuchet, Trebuchet MS, Tahoma, Arial, sans-serif;
+	position: relative;
+}
+
+#u1065-4:hover p,#u1066-4:hover p,#u1067-4:hover p,#u1068-4:hover p,#u1069-4:hover p
+{
+	text-decoration: underline;
+}
+
+#u1078
+{
+	border-style: solid;
+	border-color: #F2EDDD;
+	background-color: transparent;
+	position: relative;
+	border-width: 0px 0px 1px;
+}
+
+#u1079-9
+{
+	text-align: center;
+	line-height: 18px;
+	color: #F8F5ED;
+	position: relative;
+}
+
+#u1079-2
+{
+	font-weight: bold;
+}
+
+#u1079-7
+{
+	line-height: 0px;/* 0 for mixed font sized paras; applied on spans instead */
+}
+
+#u1079-5
+{
+	line-height: 18px;
+}
+
+#u1079-6
+{
+	font-size: 12px;
+	line-height: 16px;
+}
+
+#u1083
+{
+	background-color: transparent;
+	opacity: 0.28;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=28.000000000000004)";
+	filter: alpha(opacity=28.000000000000004);
+	position: relative;
+}
+
+#u1083:hover
+{
+	opacity: 1;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+}
+
+#u2997-30
+{
+	letter-spacing: 1px;
+	color: #F2EDDD;
+	font-family: Trebuchet, Trebuchet MS, Tahoma, Arial, sans-serif;
+	position: relative;
+}
+
+#u2997-4,#u2997-8,#u2997-9,#u2997-14,#u2997-15
+{
+	font-size: 15px;
+	line-height: 23px;
+}
+
+#u2997-20,#u2997-24,#u2997-28
+{
+	font-size: 21px;
+	line-height: 32px;
+}
+
+#u1079-3,#u2997,#u2997-5,#u2997-10,#u2997-16,#u2997-21,#u2997-25
+{
+	font-size: 1px;
+	line-height: 0px;
+}
+
+#u1081_img,#u3002_img,#u5842_img,#u3005_img,#u2999_img,#u3008_img,#u3011_img
+{
+	vertical-align: bottom;
+}
+
