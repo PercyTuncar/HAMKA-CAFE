@@ -3,6 +3,9 @@
 	background-color: #F2EDDD;
 }
 
+body{
+	overflow-x: hidden !important;
+  }
 #page
 {
 	z-index: 1;

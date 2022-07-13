@@ -24,6 +24,7 @@
    </head>
  <body>
 
+   
   <div class="clearfix" id="page"><!-- column -->
    <div class="position_content" id="page_position_content">
     <div class="browser_width mse_pre_init" id="u70"><!-- simple frame --></div>
@@ -212,7 +213,7 @@
        <div class="clearfix grpelem" id="pu309-30"><!-- column -->
         <div class="clearfix colelem" id="u309-30"><!-- content -->
          <p id="u309-4"><span id="u309">​</span><span><span class="actAsInlineDiv normal_text" id="u2976"><!-- content --><span class="actAsDiv clip_frame excludeFromNormalFlow" id="u2973"><!-- image --><img id="u2973_img" src="images/icono%20ubi.png" alt="" width="20" height="27"/></span></span></span><span>&nbsp; Av. Benavides 1944 Piso 9 &#45; Miraflores &#45; Lima</span></p>
-         <p id="u309-8"><span id="u309-5">​</span><span class="actAsInlineDiv normal_text" id="u5837"><!-- content --><span class="actAsDiv clip_frame excludeFromNormalFlow" id="u5838"><!-- image --><img id="u5838_img" src="images/icono%20ubi.png" alt="" width="20" height="27"/></span></span>&nbsp; Av. Huaylas 1625 CC Galaxy T&#45;1070 &#45; Chorrillos &#45; Lima</p>
+         <p id="u309-8"><span id="u309-5">​</span><span class="actAsInlineDiv normal_text" id="u5837"><!-- content --><span class="actAsDiv clip_frame excludeFromNormalFlow" id="u5838"><!-- image --><img id="u5838_img" src="images/icono%20ubi.png" alt="" width="20" height="27"/></span></span>&nbsp; Av. Defensores del morro 1675 (Ex - Huaylas)  CC Galaxy PB99 - Chorrillos - Lima - Perú.</p>
          <p id="u309-9">&nbsp;</p>
          <p id="u309-14"><span id="u309-10">​</span><span><span class="actAsInlineDiv normal_text" id="u2980"><!-- content --><span class="actAsDiv clip_frame excludeFromNormalFlow" id="u2977"><!-- image --><img id="u2977_img" src="images/icono%20men.png" alt="" width="25" height="19"/></span></span></span><span>&nbsp; </span>informes@hamkacafe.com</p>
          <p id="u309-15">&nbsp;</p>
@@ -242,6 +243,86 @@
     </div>
    </div>
   </div>
+ <script>
+   class LandbotWhatsAppBtn {
+  constructor({ dialcode, phone, text }) {
+    this.dialcode = dialcode;
+    this.phone = phone;
+    this.text = text;
+  }
+
+  renderButton() {
+    let fontAwesome = document.createElement("script");
+    fontAwesome.setAttribute(
+      "src",
+      "https://kit.fontawesome.com/2640aa91b4.js"
+    );
+    document.body.appendChild(fontAwesome);
+
+    let roboto = document.createElement("link");
+    roboto.setAttribute(
+      "href",
+      "https://fonts.googleapis.com/css?family=Roboto&display=swap"
+    );
+    roboto.setAttribute("rel", "stylesheet");
+    document.body.appendChild(roboto);
+
+    let styles = document.createElement("link");
+    styles.setAttribute(
+      "href",
+      "https://static.landbot.io/whatsapp-widget/whatsapp-button-widget.css"
+    );
+    styles.setAttribute("rel", "stylesheet");
+    styles.setAttribute("type", "text/css");
+    document.body.appendChild(styles);
+
+    let root = document.createElement("div");
+    root.className = "WhatsAppButton__root";
+    root.setAttribute("style", "position: fixed; bottom: 10px; right: 20px;");
+    document.body.appendChild(root);
+
+    let button_root = document.createElement("a");
+    button_root.setAttribute(
+      "href",
+      `https://api.whatsapp.com/send?phone=${this.dialcode}${this.phone}&text=${this.text}`
+    );
+    button_root.setAttribute("style", "text-decoration: none");
+    button_root.setAttribute("target", "_blank");
+    root.appendChild(button_root);
+
+    let button = document.createElement("button");
+    button.setAttribute("class", "landbot-whatsapp__button");
+    button_root.appendChild(button);
+
+    let whatsappIcon = document.createElement("i");
+    whatsappIcon.setAttribute("class", "fab fa-whatsapp");
+    whatsappIcon.setAttribute("style", "font-size: 24px; margin-right: 5px");
+    button.appendChild(whatsappIcon);
+
+    let button_text = document.createElement("p");
+    button_text.setAttribute("style", "margin: 0");
+    button_text.innerText = "WhatsApp";
+    button.appendChild(button_text);
+
+    let poweredByButton = document.createElement("a");
+    poweredByButton.setAttribute(
+      "href",
+      "https://enniosousa.com.br/?utm_source=WhatsAppButton"
+    );
+    poweredByButton.setAttribute("class", "whatsapp__poweredBy");
+    poweredByButton.setAttribute("target", "_blank");
+    poweredByButton.innerText = "Envíanos un mensaje";
+    root.appendChild(poweredByButton);
+  }
+}
+var whatsAppBtn = new LandbotWhatsAppBtn({
+  dialcode: "51",
+  phone: "950272331",
+  text: "Hola, estoy interesad@ en..."
+});
+whatsAppBtn.renderButton();
+
+ </script>
   <!-- JS includes -->
   <script type="text/javascript">
    if (document.location.protocol != 'https:') document.write('\x3Cscript src="http://musecdn.businesscatalyst.com/scripts/4.0/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
