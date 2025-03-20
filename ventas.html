@@ -4,8 +4,322 @@
 
   <script src="scripts/museredirect.js?4101519497" type="text/javascript"></script>
   
+ <style>
  
-  
+    :root {
+        --cafe-primary-color: #654321;
+        --cafe-secondary-color: #8B4513;
+        --cafe-accent-color: #d4a76a;
+        --cafe-text-color: #333;
+        --cafe-light-bg: #f9f5f0;
+        --cafe-white: #fff;
+    }
+ 
+    .cafe-container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+    
+    .cafe-header {
+        background-color: var(--cafe-white);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        padding: 15px 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    .cafe-logo-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 0;
+    }
+    
+    .cafe-logo-image {
+        height: 80px;
+    }
+    
+    .cafe-navigation {
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+        border-bottom: 1px solid var(--cafe-accent-color);
+    }
+    
+    .cafe-nav-list {
+        display: flex;
+        list-style: none;
+    }
+    
+    .cafe-nav-item {
+        margin: 0 15px;
+    }
+    
+    .cafe-nav-link {
+        text-decoration: none;
+        color: var(--cafe-primary-color);
+        font-weight: 600;
+        text-transform: uppercase;
+        padding: 10px 5px;
+        transition: color 0.3s;
+    }
+    
+    .cafe-nav-link:hover {
+        color: var(--cafe-accent-color);
+    }
+    
+    .cafe-hero-section {
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/api/placeholder/1200/400') center/cover no-repeat;
+        color: var(--cafe-white);
+        padding: 100px 20px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    
+    .cafe-hero-heading {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+    
+    .cafe-hero-text {
+        font-size: 1.2rem;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .cafe-section-heading {
+        text-align: center;
+        font-size: 2rem;
+        margin: 40px 0;
+        color: var(--cafe-primary-color);
+    }
+    
+    .cafe-product-card {
+        background-color: var(--cafe-white);
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .cafe-product-gallery {
+        width: 40%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .cafe-product-main-image {
+        height: 300px;
+        background-color: var(--cafe-light-bg);
+        margin-bottom: 15px;
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .cafe-product-main-image img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+    
+    .cafe-product-thumbnails {
+        display: flex;
+        gap: 10px;
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+    
+    .cafe-product-thumbnail {
+        width: 80px;
+        height: 80px;
+        border-radius: 4px;
+        cursor: pointer;
+        border: 2px solid transparent;
+        background-color: var(--cafe-light-bg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .cafe-product-thumbnail.active {
+        border-color: var(--cafe-accent-color);
+    }
+    
+    .cafe-product-thumbnail img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+    
+    .cafe-product-details {
+        width: 60%;
+        padding: 30px;
+    }
+    
+    .cafe-product-title {
+        font-size: 1.8rem;
+        color: var(--cafe-primary-color);
+        margin-bottom: 20px;
+        border-bottom: 2px solid var(--cafe-accent-color);
+        padding-bottom: 10px;
+    }
+    
+    .cafe-product-description {
+        margin-bottom: 20px;
+        font-size: 1rem;
+        color: var(--cafe-text-color);
+    }
+    
+    .cafe-specs-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 25px;
+    }
+    
+    .cafe-specs-table tr:nth-child(even) {
+        background-color: var(--cafe-light-bg);
+    }
+    
+    .cafe-specs-table td {
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .cafe-specs-table td:first-child {
+        font-weight: 600;
+        width: 50%;
+    }
+    
+    .cafe-action-button {
+        display: inline-block;
+        padding: 12px 25px;
+        background-color: var(--cafe-primary-color);
+        color: var(--cafe-white);
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: 600;
+        transition: background-color 0.3s;
+        text-align: center;
+        margin-right: 10px;
+    }
+    
+    .cafe-action-button:hover {
+        background-color: var(--cafe-secondary-color);
+    }
+    
+    .cafe-action-button-alt {
+        background-color: var(--cafe-accent-color);
+    }
+    
+    .cafe-action-button-alt:hover {
+        background-color: var(--cafe-secondary-color);
+    }
+    
+    .cafe-button-group {
+        display: flex;
+        gap: 10px;
+    }
+    
+    .cafe-info-card {
+        background-color: var(--cafe-accent-color);
+        color: var(--cafe-white);
+        padding: 20px;
+        border-radius: 8px;
+        margin: 40px 0;
+    }
+    
+    .cafe-info-card-title {
+        margin-bottom: 10px;
+        font-size: 1.5rem;
+    }
+    
+    .cafe-footer {
+        background-color: var(--cafe-primary-color);
+        color: var(--cafe-white);
+        padding: 30px 0;
+        text-align: center;
+        margin-top: 40px;
+    }
+    
+    .cafe-social-links {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin: 20px 0;
+    }
+    
+    .cafe-social-link {
+        color: var(--cafe-white);
+        font-size: 1.5rem;
+    }
+    
+    .cafe-whatsapp-float {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #25D366;
+        color: white;
+        border-radius: 50px;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        z-index: 999;
+    }
+    
+    .cafe-whatsapp-float span {
+        margin-left: 8px;
+    }
+    
+    /* Responsive styles */
+    @media (max-width: 992px) {
+        .cafe-product-card {
+            flex-direction: column;
+        }
+        
+        .cafe-product-gallery, .cafe-product-details {
+            width: 100%;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .cafe-nav-list {
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .cafe-nav-item {
+            margin: 5px 0;
+        }
+        
+        .cafe-hero-heading {
+            font-size: 2rem;
+        }
+        
+        .cafe-product-title {
+            font-size: 1.5rem;
+        }
+        
+        .cafe-button-group {
+            flex-direction: column;
+        }
+        
+        .cafe-action-button {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+</style> 
   <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
   <meta name="generator" content="7.4.30.244"/>
   <link rel="shortcut icon" href="images/favicon.ico?380354864"/>
@@ -62,6 +376,542 @@
     </div>
     <div class="clearfix colelem" id="u773-6"><!-- content -->
      <p>Cafeteras <span id="u773-2">Full Automáticas</span>&nbsp;con granos de café</p>
+     <div class="cafe-container">
+      <h2 class="cafe-section-heading">Venta de Equipos</h2>
+      
+      <!-- Philips Series 3000 -->
+      <div class="cafe-product-card">
+          <div class="cafe-product-gallery">
+              <div class="cafe-product-main-image">
+                  <img src="/img/Philip 3000 series/1.jpg" alt="Philips Series 3000">
+              </div>
+              <div class="cafe-product-thumbnails">
+                  <div class="cafe-product-thumbnail active">
+                      <img src="/img/Philip 3000 series/2.jpeg" alt="Philips Series 3000 thumbnail 1">
+                  </div>
+                  <div class="cafe-product-thumbnail">
+                      <img src="/img/Philip 3000 series/3.jpeg" alt="Philips Series 3000 thumbnail 2">
+                  </div>
+                  <div class="cafe-product-thumbnail">
+                      <img src="/img/Philip 3000 series/4.jpeg" alt="Philips Series 3000 thumbnail 3">
+                  </div>
+                  <div class="cafe-product-thumbnail">
+                    <img src="/img/Philip 3000 series/5.jpeg" alt="Philips Series 3000 thumbnail 3">
+                </div>
+              </div>
+          </div>
+          <div class="cafe-product-details">
+              <h3 class="cafe-product-title">Philips Series 3000              </h3>
+              <p class="cafe-product-description">Philips Series 3000 HD8829/01, una cafetera super
+                automática que trabaja con granos de café, tu
+                cappuccino favorito con un solo toque. Gracias a su
+                gran capacidad en un diseño compacto, podrá disfrutar
+                de espresso, café y capuchino recién hechos con solo
+                tocar un botón.
+                </p>
+              <p class="cafe-product-description">Disfrutar de un buen café, con granos recién molidos
+                como en las mejores cafeterías del país.
+                </p>
+              
+              <table class="cafe-specs-table">
+                  <tr>
+                      <td>Tipo de café</td>
+                      <td>En granos</td>
+                  </tr>
+                  <tr>
+                      <td>Contenedor de café</td>
+                      <td>250 Gr.</td>
+                  </tr>
+                  <tr>
+                      <td>Contenedor de agua</td>
+                      <td>1.7 Lt.</td>
+                  </tr>
+                  <tr>
+                      <td>Voltaje</td>
+                      <td>220v / 60 Hz</td>
+                  </tr>
+                  <tr>
+                      <td>Potencia</td>
+                      <td>1800 W</td>
+                  </tr>
+                  <tr>
+                      <td>Dimensiones (Largo x Profundidad x Altura)</td>
+                      <td>215 x 330 x 429 mm</td>
+                  </tr>
+              </table>
+              
+              <div class="cafe-button-group">
+                  <a href="#" class="cafe-action-button">Solicitar Cotización</a>
+           
+                  
+
+
+
+
+                  <!-- Botón para abrir el visor de PDFs -->
+<a href="#" class="cafe-action-button cafe-action-button-alt" 
+onclick="openPdfViewer(['./img/Philip 3000 series/ROYAL- DATACONT.pdf', './img/Philip 3000 series/Especificaciones tecnicas.pdf'])">
+Ver Ficha
+</a>
+
+<!-- Modal para la previsualización de PDFs -->
+<div id="pdfModal" class="modal">
+ <div class="modal-content">
+     <span class="close" onclick="closePdfViewer()">&times;</span>
+     <iframe id="pdfViewer"></iframe>
+     <div id="pdfControls"></div> <!-- Miniaturas de PDFs -->
+ </div>
+</div>
+
+<!-- Estilos del modal -->
+<style>
+/* Fondo del modal */
+.modal {
+ display: none; 
+ position: fixed; 
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ width: 90%;
+ max-width: 600px;
+ height: 80vh;
+ background: rgba(0, 0, 0, 0.8);
+ border-radius: 10px;
+ box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+ z-index: 1000;
+}
+
+/* Contenido del modal */
+.modal-content {
+ background: #fff;
+ width: 100%;
+ height: 100%;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ padding: 15px;
+ border-radius: 10px;
+ position: relative;
+}
+
+/* Botón de cierre */
+.close {
+ 
+ position: absolute;
+ top: 5px;
+ right: 5px;
+ font-size: 24px;
+ font-weight: bold;
+ cursor: pointer;
+ color: #ffffff;
+    background: red;
+    border-radius: 50%;
+    padding: 6px;
+}
+
+/* Visor PDF */
+#pdfViewer {
+ width: 100%;
+ height: 90%;
+ border: none;
+}
+
+/* Controles de PDF (miniaturas o botones) */
+#pdfControls {
+ display: flex;
+ justify-content: center;
+ gap: 10px;
+ margin-top: 5px;
+}
+
+#pdfControls button {
+ background: #333;
+ color: white;
+ border: none;
+ padding: 5px 10px;
+ cursor: pointer;
+ border-radius: 5px;
+ font-size: 14px;
+}
+
+#pdfControls button:hover {
+ background: #555;
+}
+</style>
+
+<!-- JavaScript para manejar el modal -->
+<script>
+function openPdfViewer(pdfFiles) {
+ const modal = document.getElementById("pdfModal");
+ const viewer = document.getElementById("pdfViewer");
+ const controls = document.getElementById("pdfControls");
+
+ if (pdfFiles.length === 0) return;
+
+ // Cargar el primer PDF por defecto
+ viewer.src = pdfFiles[0];
+
+ // Limpiar controles anteriores
+ controls.innerHTML = "";
+
+ // Si hay más de un PDF, crear botones para cambiar de documento
+ if (pdfFiles.length > 1) {
+     pdfFiles.forEach((pdf, index) => {
+         let btn = document.createElement("button");
+         btn.textContent = "PDF " + (index + 1);
+         btn.onclick = () => viewer.src = pdf;
+         controls.appendChild(btn);
+     });
+ }
+
+ // Mostrar el modal
+ modal.style.display = "block";
+}
+
+function closePdfViewer() {
+ document.getElementById("pdfModal").style.display = "none";
+}
+</script>
+
+
+
+
+
+
+
+              </div>
+          </div>
+      </div>
+      
+      <!-- SAECO Lirika OTC -->
+      <div class="cafe-product-card">
+          <div class="cafe-product-gallery">
+              <div class="cafe-product-main-image">
+                  <img src="/img/Saeco Lirika OTC/1.avif" alt="SAECO Lirika OTC">
+              </div>
+              <div class="cafe-product-thumbnails">
+                  <div class="cafe-product-thumbnail active">
+                      <img src="/img/Saeco Lirika OTC/2.jpg" alt="SAECO Lirika OTC thumbnail 1">
+                  </div>
+                  <div class="cafe-product-thumbnail">
+                      <img src="/img/Saeco Lirika OTC/3.jpg" alt="SAECO Lirika OTC thumbnail 2">
+                  </div>
+                  <div class="cafe-product-thumbnail">
+                      <img src="/img/Saeco Lirika OTC/4.jpg" alt="SAECO Lirika OTC thumbnail 3">
+                  </div>
+              </div>
+          </div>
+          <div class="cafe-product-details">
+              <h3 class="cafe-product-title">SAECO Lirika OTC</h3>
+              <p class="cafe-product-description">Lirika OTC una cafetera super automática que trabaja con granos de café, tu cappuccino favorito con un solo toque. Gracias a su gran capacidad en un diseño compacto, podrá disfrutar de espresso, café y capuchino recién hechos con solo tocar un botón.</p>
+              <p class="cafe-product-description">Cuenta con tecnología One Touch Cappuccino. Disfrutar de un buen café, con granos recién molidos como en las mejores cafeterías del país.</p>
+              
+              <table class="cafe-specs-table">
+                  <tr>
+                      <td>Contenedor de café</td>
+                      <td>500 Gr.</td>
+                  </tr>
+                  <tr>
+                      <td>Contenedor de agua</td>
+                      <td>2.5 Lt.</td>
+                  </tr>
+                  <tr>
+                      <td>Voltaje</td>
+                      <td>220v / 60 Hz</td>
+                  </tr>
+                  <tr>
+                      <td>Potencia</td>
+                      <td>1800 W</td>
+                  </tr>
+                  <tr>
+                      <td>Dimensiones (Largo x Profundidad x Altura)</td>
+                      <td>215 x 370 x 429 mm</td>
+                  </tr>
+              </table>
+              
+              <div class="cafe-button-group">
+                  <a href="#" class="cafe-action-button">Solicitar Cotización</a>
+                  <a href="#" class="cafe-action-button cafe-action-button-alt" 
+                  onclick="openPdfViewer(['./img/Saeco Lirika OTC/OTC.pdf'])">
+                  Ver Ficha
+                  </a>
+              </div>
+          </div>
+      </div>
+      
+      <!-- SAECO ROYAL BLACK -->
+      <div class="cafe-product-card">
+          <div class="cafe-product-gallery">
+              <div class="cafe-product-main-image">
+                  <img src="/img/Saeco Royal Black/1.jpg" alt="SAECO ROYAL BLACK">
+              </div>
+              <div class="cafe-product-thumbnails">
+                  <div class="cafe-product-thumbnail active">
+                      <img src="/img/Saeco Royal Black/2.jpg" alt="SAECO ROYAL BLACK thumbnail 1">
+                  </div>
+                  <div class="cafe-product-thumbnail">
+                      <img src="/img/Saeco Royal Black/Portada.jpg" alt="SAECO ROYAL BLACK thumbnail 2">
+                  </div>
+                 
+              </div>
+          </div>
+          <div class="cafe-product-details">
+              <h3 class="cafe-product-title">SAECO ROYAL BLACK</h3>
+              <p class="cafe-product-description">ROYAL BLACK, cafetera super automática, especializada en tipos de café. Perfecta, para los amantes del buen café.</p>
+              <p class="cafe-product-description">Disfrutar de un buen café, con granos recién molidos como en las mejores cafeterías del país.</p>
+              
+              <table class="cafe-specs-table">
+                  <tr>
+                      <td>Contenedor de café</td>
+                      <td>600 Gr.</td>
+                  </tr>
+                  <tr>
+                      <td>Contenedor de agua</td>
+                      <td>2.5 Lt.</td>
+                  </tr>
+                  <tr>
+                      <td>Voltaje</td>
+                      <td>220v / 60 Hz</td>
+                  </tr>
+                  <tr>
+                      <td>Potencia</td>
+                      <td>1800 W</td>
+                  </tr>
+                  <tr>
+                      <td>Dimensiones (Largo x Profundidad x Altura)</td>
+                      <td>280 x 398 x 450 mm</td>
+                  </tr>
+              </table>
+              
+              <div class="cafe-button-group">
+                  <a href="#" class="cafe-action-button">Solicitar Cotización</a>
+                  <div class="cafe-button-group">
+                     
+                    <a href="#" class="cafe-action-button cafe-action-button-alt" 
+                    onclick="openPdfViewer(['./img/Saeco Royal Black/ROYAL- HAMKA.pdf'])">
+                    Ver Ficha
+                    </a>
+                </div>
+              </div>
+          </div>
+      </div>
+      
+      <!-- SAECO ROYAL PLUS -->
+      <div class="cafe-product-card">
+          <div class="cafe-product-gallery">
+              <div class="cafe-product-main-image">
+                  <img src="/img/Saeco Royal plus/0.jpg" alt="SAECO ROYAL PLUS">
+              </div>
+              <div class="cafe-product-thumbnails">
+                  <div class="cafe-product-thumbnail active">
+                      <img src="/img/Saeco Royal plus/1.jpg" alt="SAECO ROYAL PLUS thumbnail 1">
+                  </div>
+                  <div class="cafe-product-thumbnail">
+                      <img src="/img/Saeco Royal plus/2.jpg" alt="SAECO ROYAL PLUS thumbnail 2">
+                  </div>
+                  <div class="cafe-product-thumbnail">
+                      <img src="/img/Saeco Royal plus/3.jpg" alt="SAECO ROYAL PLUS thumbnail 3">
+                  </div>
+                  <div class="cafe-product-thumbnail">
+                    <img src="/img/Saeco Royal plus/4.jpg" alt="SAECO ROYAL PLUS thumbnail 3">
+                </div>
+              </div>
+          </div>
+          <div class="cafe-product-details">
+              <h3 class="cafe-product-title">SAECO ROYAL PLUS</h3>
+              <p class="cafe-product-description">ROYAL BLACK, Con tu cafetera super automática, disfrutarás de unos cafés deliciosos: suaves, finos, intensos; elige la opción que quieras desde el panel de control y deléitate con todos tus sentidos.</p>
+              <p class="cafe-product-description">Disfrutar de un buen café, con granos recién molidos como en las mejores cafeterías del país.</p>
+              
+              <table class="cafe-specs-table">
+                  <tr>
+                      <td>Contenedor de café</td>
+                      <td>600 Gr.</td>
+                  </tr>
+                  <tr>
+                      <td>Contenedor de agua</td>
+                      <td>2.5 Lt.</td>
+                  </tr>
+                  <tr>
+                      <td>Voltaje</td>
+                      <td>220v / 60 Hz</td>
+                  </tr>
+                  <tr>
+                      <td>Potencia</td>
+                      <td>1800 W</td>
+                  </tr>
+                  <tr>
+                      <td>Dimensiones (Largo x Profundidad x Altura)</td>
+                      <td>280 x 398 x 450 mm</td>
+                  </tr>
+              </table>
+              
+              <div class="cafe-button-group">
+                  <a href="#" class="cafe-action-button">Solicitar Cotización</a>
+                  <a href="#" class="cafe-action-button cafe-action-button-alt" 
+                  onclick="openPdfViewer(['./img/Saeco Royal plus/ROYAL- HAMKA.pdf'])">
+                  Ver Ficha
+                  </a>
+              </div>
+          </div>
+      </div>
+      
+      <!-- SAECO ROYAL OTC -->
+      <div class="cafe-product-card">
+          <div class="cafe-product-gallery">
+              <div class="cafe-product-main-image">
+                  <img src="/img/Saeco Royal OTC/1.jpg" alt="SAECO ROYAL OTC">
+              </div>
+              <div class="cafe-product-thumbnails">
+                  <div class="cafe-product-thumbnail active">
+                      <img src="/img/Saeco Royal OTC/2.jpg" alt="SAECO ROYAL OTC thumbnail 1">
+                  </div>
+                  <div class="cafe-product-thumbnail">
+                      <img src="/img/Saeco Royal OTC/3.jpg" alt="SAECO ROYAL OTC thumbnail 2">
+                  </div>
+                  <div class="cafe-product-thumbnail">
+                      <img src="/img/Saeco Royal OTC/4.jpg" alt="SAECO ROYAL OTC thumbnail 3">
+                  </div>
+                  <div class="cafe-product-thumbnail">
+                    <img src="/img/Saeco Royal OTC/5.jpg" alt="SAECO ROYAL OTC thumbnail 3">
+                </div>
+              </div>
+          </div>
+          <div class="cafe-product-details">
+              <h3 class="cafe-product-title">SAECO ROYAL OTC</h3>
+              <p class="cafe-product-description">ROYAL BLACK OTC, Con tu cafetera super automática con toda la tecnología italiana en tus manos. Tener un espresso, ristretto, americano, cappuccino o latte con solo presionar un botón.</p>
+              <p class="cafe-product-description">Disfrutar de un buen café, con granos recién molidos como en las mejores cafeterías del país.</p>
+              
+              <table class="cafe-specs-table">
+                  <tr>
+                      <td>Contenedor de café</td>
+                      <td>600 Gr.</td>
+                  </tr>
+                  <tr>
+                      <td>Contenedor de agua</td>
+                      <td>2.5 Lt.</td>
+                  </tr>
+                  <tr>
+                      <td>Voltaje</td>
+                      <td>220v / 60 Hz</td>
+                  </tr>
+                  <tr>
+                      <td>Potencia</td>
+                      <td>1800 W</td>
+                  </tr>
+                  <tr>
+                      <td>Dimensiones (Largo x Profundidad x Altura)</td>
+                      <td>280 x 398 x 450 mm</td>
+                  </tr>
+              </table>
+              
+              <div class="cafe-button-group">
+                  <a href="#" class="cafe-action-button">Solicitar Cotización</a>
+                  <a href="#" class="cafe-action-button cafe-action-button-alt" 
+                  onclick="openPdfViewer(['./img/Saeco Royal OTC/ROYAL- HAMKA.pdf'])">
+                  Ver Ficha
+                  </a>
+              </div>
+          </div>
+      </div>
+      
+      <!-- SAECO PICO BARISTO 
+      <div class="cafe-product-card">
+          <div class="cafe-product-gallery">
+              <div class="cafe-product-main-image">
+                  <img src="/img/1.jpeg" alt="SAECO PICO BARISTO">
+              </div>
+              <div class="cafe-product-thumbnails">
+                  <div class="cafe-product-thumbnail active">
+                      <img src="/api/placeholder/80/80" alt="SAECO PICO BARISTO thumbnail 1">
+                  </div>
+                  <div class="cafe-product-thumbnail">
+                      <img src="/api/placeholder/80/80" alt="SAECO PICO BARISTO thumbnail 2">
+                  </div>
+                  <div class="cafe-product-thumbnail">
+                      <img src="/api/placeholder/80/80" alt="SAECO PICO BARISTO thumbnail 3">
+                  </div>
+              </div>
+          </div>
+          <div class="cafe-product-details">
+              <h3 class="cafe-product-title">SAECO PICO BARISTO</h3>
+              <p class="cafe-product-description">SAECO PICO BARISTO, una cafetera super automática que te acerca a la experiencia profesional del café.</p>
+              
+              <table class="cafe-specs-table">
+                  <tr>
+                      <td>Tipo de café Admitido</td>
+                      <td>En granos</td>
+                  </tr>
+                  <tr>
+                      <td>Cap. Bandeja de café</td>
+                      <td>200 gr.</td>
+                  </tr>
+                  <tr>
+                      <td>Cap. Bandeja de Agua</td>
+                      <td>1.8 L</td>
+                  </tr>
+                  <tr>
+                      <td>Presión de la bomba</td>
+                      <td>15 bar (Café y Leche)</td>
+                  </tr>
+                  <tr>
+                      <td>Caldera</td>
+                      <td>Monocircuito</td>
+                  </tr>
+                  <tr>
+                      <td>Bandeja de goteo</td>
+                      <td>Rejilla de acero</td>
+                  </tr>
+                  <tr>
+                      <td>Voltaje</td>
+                      <td>220V</td>
+                  </tr>
+                  <tr>
+                      <td>Frecuencia</td>
+                      <td>60 Hz</td>
+                  </tr>
+                  <tr>
+                      <td>Alimentación</td>
+                      <td>1850 w (10A)</td>
+                  </tr>
+                  <tr>
+                      <td>Dimensiones</td>
+                      <td>22 x 34 x 43 cm</td>
+                  </tr>
+                  <tr>
+                      <td>Material de Estructura</td>
+                      <td>ABS Plástico</td>
+                  </tr>
+                  <tr>
+                      <td>Manual e instructivos</td>
+                      <td>Sí</td>
+                  </tr>
+                  <tr>
+                      <td>One Touch</td>
+                      <td>Sí</td>
+                  </tr>
+                  <tr>
+                      <td>Pantalla led</td>
+                      <td>Sí</td>
+                  </tr>
+                  <tr>
+                      <td>País de Origen</td>
+                      <td>Italy (Producto importado)</td>
+                  </tr>
+              </table>
+              
+              <div class="cafe-button-group">
+                  <a href="#" class="cafe-action-button">Solicitar Cotización</a>
+                  <a href="#" class="cafe-action-button cafe-action-button-alt">Descargar Ficha</a>
+              </div>
+          </div>
+      </div>-->
+      
+      <div class="cafe-info-card">
+          <h3 class="cafe-info-card-title">Sobre el Café Peruano</h3>
+          <p>Perú es el segundo mayor exportador de café orgánico del mundo, después de México. Perú tiene 425,416 hectáreas dedicadas al cultivo de café, lo que representa el 6% del área agrícola nacional. El potencial de crecimiento del café en el país es de aproximadamente 2 millones de hectáreas. Las plantaciones de café están ubicadas en 17 regiones, 67 provincias y 338 distritos.</p>
+          <p>La rica variedad de climas, costa, andina y selva, contribuyen a una excelente cantidad de café con calidad de exportación. Tenemos una gran variedad de café para ofrecer.</p>
+      </div>
+  </div>
     </div>
     <div class="clearfix colelem" id="pslideshowu4360"><!-- group -->
      <div class="SlideShowWidget clearfix widget_invisible grpelem" id="slideshowu4360"><!-- none box -->
@@ -89,24 +939,17 @@
       </div>
       <div class="popup_anchor" id="u4378popup">
        <div class="SSSlideLinks clearfix" id="u4378"><!-- horizontal-rows box -->
-        <div class="SSSlideLink clip_frame grpelem" id="u4389"><!-- image -->
-         <img class="block" id="u4389_img" src="images/minuto198x98.jpg" alt="" width="98" height="98"/>
-        </div>
-        <div class="SSSlideLink clip_frame grpelem" id="u5425"><!-- image -->
-         <img class="block" id="u5425_img" src="images/minuto298x98.jpg" alt="" width="98" height="98"/>
-        </div>
-        <div class="SSSlideLink clip_frame grpelem" id="u5434"><!-- image -->
-         <img class="block" id="u5434_img" src="images/minuto398x98.jpg" alt="" width="98" height="98"/>
-        </div>
-        <div class="SSSlideLink clip_frame grpelem" id="u5443"><!-- image -->
-         <img class="block" id="u5443_img" src="images/minuto498x98.jpg" alt="" width="98" height="98"/>
-        </div>
-        <div class="SSSlideLink clip_frame grpelem" id="u5452"><!-- image -->
-         <img class="block" id="u5452_img" src="images/minuto598x98.jpg" alt="" width="98" height="98"/>
-        </div>
-        <div class="SSSlideLink clip_frame grpelem" id="u5461"><!-- image -->
-         <img class="block" id="u5461_img" src="images/minuto698x98.jpg" alt="" width="98" height="98"/>
-        </div>
+     
+       
+        <div class="SSSlideLink clip_frame grpelem"  ><!-- image -->
+          
+         </div>
+        <div class="SSSlideLink clip_frame grpelem" ><!-- image -->
+         </div>
+        <div class="SSSlideLink clip_frame grpelem" ><!-- image -->
+         </div>
+        <div class="SSSlideLink clip_frame grpelem"  ><!-- image -->
+         </div>
        </div>
       </div>
       <div class="popup_anchor">
@@ -137,50 +980,10 @@
       <p>Muele al instante los granos de café, y dosifica automáticamente la cantidad necesaria. Ya no necesita ser un Barista, para lograr el mejor café.</p>
      </div>
     </div>
-    <div class="clearfix colelem" id="pu4358-32"><!-- group -->
-     <div class="clearfix grpelem" id="u4358-32"><!-- content -->
-      <p>Tipo de café Admitido</p>
-      <p>Cap. Bandeja de café</p>
-      <p>Cap. Bandeja de Agua</p>
-      <p>Presión de la bomba</p>
-      <p>Caldera</p>
-      <p>Bandeja de goteo</p>
-      <p>Voltaje</p>
-      <p>Frecuencia</p>
-      <p>Alimentación</p>
-      <p>Dimensiones</p>
-      <p>Material de Estructura</p>
-      <p>Manual e instructivos</p>
-      <p>One Touch</p>
-      <p>Pantalla led</p>
-      <p>País de Origen</p>
-     </div>
-     <div class="clearfix grpelem" id="u4434-4"><!-- content -->
-      <p>SAECO MINUTO</p>
-     </div>
-     <div class="clearfix grpelem" id="u4435-3"><!-- content -->
-      <p>&nbsp;</p>
-     </div>
-     <div class="clearfix grpelem" id="u4436-32"><!-- content -->
-      <p>: en granos</p>
-      <p>: 180 gr.</p>
-      <p>: 1.8 L</p>
-      <p>: 15 bar (Café y Leche)</p>
-      <p>: Monocircuito</p>
-      <p>: Rejilla de acero</p>
-      <p>: 220V</p>
-      <p>: 60 Hz</p>
-      <p>: 1850 w (10A)</p>
-      <p>: 22 x 32 x 35 cm</p>
-      <p>: ABS Plástico</p>
-      <p>: si</p>
-      <p>: no</p>
-      <p>: si</p>
-      <p>: Italy (Producto Importado)</p>
-     </div>
-     <div class="clip_frame grpelem" id="u5385"><!-- image -->
-      <img class="block" id="u5385_img" src="images/minutocafe.jpg" alt="" width="250" height="368"/>
-     </div>
+     
+  
+     
+     
     </div>
     <div class="clearfix colelem" id="ppslideshowu4198"><!-- group -->
      <div class="clearfix grpelem" id="pslideshowu4198"><!-- column -->
@@ -200,15 +1003,10 @@
        </div>
        <div class="popup_anchor" id="u4241popup">
         <div class="SSSlideLinks clearfix" id="u4241"><!-- horizontal-rows box -->
-         <div class="SSSlideLink clip_frame grpelem" id="u4242"><!-- image -->
-          <img class="block" id="u4242_img" src="images/pico-baristo198x98.jpg" alt="" width="98" height="98"/>
-         </div>
-         <div class="SSSlideLink clip_frame grpelem" id="u5637"><!-- image -->
-          <img class="block" id="u5637_img" src="images/pico-baristo298x98.jpg" alt="" width="98" height="98"/>
-         </div>
-         <div class="SSSlideLink clip_frame grpelem" id="u5646"><!-- image -->
-          <img class="block" id="u5646_img" src="images/pico-baristo398x98.jpg" alt="" width="98" height="98"/>
-         </div>
+     
+         
+         <div class="SSSlideLink    " ><!-- image -->
+          </div>
         </div>
        </div>
        <div class="popup_anchor">
@@ -256,21 +1054,12 @@
        </div>
        <div class="popup_anchor" id="u3730popup">
         <div class="SSSlideLinks clearfix" id="u3730"><!-- horizontal-rows box -->
-         <div class="SSSlideLink clip_frame grpelem" id="u3735"><!-- image -->
-          <img class="block" id="u3735_img" src="images/lirika198x98.jpg" alt="" width="98" height="98"/>
-         </div>
-         <div class="SSSlideLink clip_frame grpelem" id="u3881"><!-- image -->
-          <img class="block" id="u3881_img" src="images/lirika298x98.jpg" alt="" width="98" height="98"/>
-         </div>
-         <div class="SSSlideLink clip_frame grpelem" id="u3890"><!-- image -->
-          <img class="block" id="u3890_img" src="images/lirika398x98.jpg" alt="" width="98" height="98"/>
-         </div>
-         <div class="SSSlideLink clip_frame grpelem" id="u3899"><!-- image -->
-          <img class="block" id="u3899_img" src="images/lirika498x98.jpg" alt="" width="98" height="98"/>
-         </div>
-         <div class="SSSlideLink clip_frame grpelem" id="u3908"><!-- image -->
-          <img class="block" id="u3908_img" src="images/lirika598x98.jpg" alt="" width="98" height="98"/>
-         </div>
+        
+       
+        
+        
+         <div class="SSSlideLink    " ><!-- image -->
+          </div>
         </div>
        </div>
        <div class="popup_anchor">
@@ -318,22 +1107,14 @@
        </div>
       </div>
       <div class="popup_anchor" id="u4042popup">
-       <div class="SSSlideLinks clearfix" id="u4042"><!-- horizontal-rows box -->
-        <div class="SSSlideLink clip_frame grpelem" id="u4043"><!-- image -->
-         <img class="block" id="u4043_img" src="images/otc198x98.jpg" alt="" width="98" height="98"/>
+       <div class="SSSlideLinks  " ><!-- horizontal-rows box -->
+       
+    
+        
+        <div class="SSSlideLink    " id=" "><!-- image -->
+        
         </div>
-        <div class="SSSlideLink clip_frame grpelem" id="u4134"><!-- image -->
-         <img class="block" id="u4134_img" src="images/otc298x98.jpg" alt="" width="98" height="98"/>
-        </div>
-        <div class="SSSlideLink clip_frame grpelem" id="u4143"><!-- image -->
-         <img class="block" id="u4143_img" src="images/otc398x98.jpg" alt="" width="98" height="98"/>
-        </div>
-        <div class="SSSlideLink clip_frame grpelem" id="u4152"><!-- image -->
-         <img class="block" id="u4152_img" src="images/otc498x98.jpg" alt="" width="98" height="98"/>
-        </div>
-        <div class="SSSlideLink clip_frame grpelem" id="u4161"><!-- image -->
-         <img class="block" id="u4161_img" src="images/otc598x98.jpg" alt="" width="98" height="98"/>
-        </div>
+        
        </div>
       </div>
       <div class="popup_anchor">
@@ -359,137 +1140,21 @@
        </div>
       </div>
      </div>
-     <div class="clearfix grpelem" id="u3622-32"><!-- content -->
-      <p>Tipo de café Admitido</p>
-      <p>Cap. Bandeja de café</p>
-      <p>Cap. Bandeja de Agua</p>
-      <p>Presión de la bomba</p>
-      <p>Caldera</p>
-      <p>Bandeja de goteo</p>
-      <p>Voltaje</p>
-      <p>Frecuencia</p>
-      <p>Alimentación</p>
-      <p>Dimensiones</p>
-      <p>Material de Estructura</p>
-      <p>Manual e instructivos</p>
-      <p>One Touch</p>
-      <p>Pantalla led</p>
-      <p>País de Origen</p>
-     </div>
-     <div class="clearfix grpelem" id="u3623-4"><!-- content -->
-      <p>SAECO LIRIKA PLUS</p>
-     </div>
-     <div class="clearfix grpelem" id="u3624-32"><!-- content -->
-      <p>: en granos</p>
-      <p>: 500 gr.</p>
-      <p>: 2.5 L</p>
-      <p>: 15 bar (Café y Leche)</p>
-      <p>: Monocircuito</p>
-      <p>: Rejilla de acero</p>
-      <p>: 220V</p>
-      <p>: 60 Hz</p>
-      <p>: 1850 w (10A)</p>
-      <p>: 22 x 40 x 43 cm</p>
-      <p>: ABS Plástico</p>
-      <p>: si</p>
-      <p>: no</p>
-      <p>: si</p>
-      <p>: Italy (Producto Importado)</p>
-     </div>
-     <div class="clearfix grpelem" id="u3625-3"><!-- content -->
-      <p>&nbsp;</p>
-     </div>
-     <div class="clearfix grpelem" id="u3634-3"><!-- content -->
-      <p>&nbsp;</p>
-     </div>
-     <div class="clearfix grpelem" id="u3639-32"><!-- content -->
-      <p>Tipo de café Admitido</p>
-      <p>Cap. Bandeja de café</p>
-      <p>Cap. Bandeja de Agua</p>
-      <p>Presión de la bomba</p>
-      <p>Caldera</p>
-      <p>Bandeja de goteo</p>
-      <p>Voltaje</p>
-      <p>Frecuencia</p>
-      <p>Alimentación</p>
-      <p>Dimensiones</p>
-      <p>Material de Estructura</p>
-      <p>Manual e instructivos</p>
-      <p>One Touch</p>
-      <p>Pantalla led</p>
-      <p>País de Origen</p>
-     </div>
-     <div class="clearfix grpelem" id="u3640-4"><!-- content -->
-      <p>SAECO PICO BARISTO</p>
-     </div>
-     <div class="clearfix grpelem" id="u3643-32"><!-- content -->
-      <p>: en granos</p>
-      <p>: 200 gr.</p>
-      <p>: 1.8 L</p>
-      <p>: 15 bar (Café y Leche)</p>
-      <p>: Monocircuito</p>
-      <p>: Rejilla de acero</p>
-      <p>: 220V</p>
-      <p>: 60 Hz</p>
-      <p>: 1850 w (10A)</p>
-      <p>: 22 x 34 x 43 cm</p>
-      <p>: ABS Plástico</p>
-      <p>: Sí</p>
-      <p>: Sí</p>
-      <p>: Sí</p>
-      <p>: Italy (Producto importado)</p>
-     </div>
+    
+    
+    
+  
+     
+     
+     
      <div class="clip_frame grpelem" id="u3952"><!-- image -->
-      <img class="block" id="u3952_img" src="images/lirikacafe.jpg" alt="" width="265" height="323"/>
-     </div>
+      </div>
      <div class="clip_frame grpelem" id="u5612"><!-- image -->
-      <img class="block" id="u5612_img" src="images/pico-baristo-cafe.jpg" alt="" width="257" height="304"/>
-     </div>
+      </div>
     </div>
     <div class="clearfix colelem" id="pu3630-32"><!-- group -->
-     <div class="clearfix grpelem" id="u3630-32"><!-- content -->
-      <p>Tipo de café Admitido</p>
-      <p>Cap. Bandeja de café</p>
-      <p>Cap. Bandeja de Agua</p>
-      <p>Presión de la bomba</p>
-      <p>Caldera</p>
-      <p>Bandeja de goteo</p>
-      <p>Voltaje</p>
-      <p>Frecuencia</p>
-      <p>Alimentación</p>
-      <p>Dimensiones</p>
-      <p>Material de Estructura</p>
-      <p>Manual e instructivos</p>
-      <p>One Touch</p>
-      <p>Pantalla led</p>
-      <p>País de Origen</p>
-     </div>
-     <div class="clearfix grpelem" id="u3631-4"><!-- content -->
-      <p>SAECO LIRIKA OTC</p>
-     </div>
-     <div class="clearfix grpelem" id="u3633-32"><!-- content -->
-      <p>: En granos</p>
-      <p>: 500 gr.</p>
-      <p>: 2.5 L</p>
-      <p>: 15 bar (Café y Leche)</p>
-      <p>: Monocircuito</p>
-      <p>: Rejilla de acero</p>
-      <p>: 220V</p>
-      <p>: 60 Hz</p>
-      <p>: 1850 w (10A)</p>
-      <p>: 22 x 40 x 43 cm</p>
-      <p>: ABS Plástico</p>
-      <p>: Si</p>
-      <p>: Si</p>
-      <p>: Si</p>
-      <p>: Italy (Producto Importado)</p>
-     </div>
-     <div class="clearfix grpelem" id="u3642-3"><!-- content -->
-      <p>&nbsp;</p>
-     </div>
-     <div class="clip_frame grpelem" id="u4173"><!-- image -->
-      <img class="block" id="u4173_img" src="images/otccafe.jpg" alt="" width="254" height="301"/>
-     </div>
+      
+ 
     </div>
     <div class="verticalspacer"></div>
     <div class="clearfix colelem" id="pu299"><!-- group -->
@@ -531,6 +1196,136 @@
     </div>
    </div>
   </div>
+ 
+  
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".cafe-action-button").forEach(button => {
+            if (button.textContent.trim() === "Solicitar Cotización") {
+                button.addEventListener("click", function (event) {
+                    event.preventDefault();
+
+                    let productCard = this.closest(".cafe-product-card");
+                    let productName = productCard.querySelector(".cafe-product-title").textContent.trim();
+
+                    let message = `Hola, estoy interesado en solicitar una cotización para el producto: *${productName}*. ¿Podrían brindarme más información?`;
+
+                    let phoneNumber = "51950272331";
+                    let whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+                    window.open(whatsappUrl, "_blank");
+                });
+            }
+        });
+    });
+</script>
+
+
+<script>
+ 
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".cafe-action-button-alt").forEach(button => {
+        button.addEventListener("click", function (event) {
+            event.preventDefault();
+            const productName = this.closest(".cafe-product-details").querySelector(".cafe-product-title").textContent.trim();
+            const files = productFiles[productName];
+
+            if (files.length === 1) {
+                // Si solo hay un archivo, descargar directamente
+                window.open(files[0], "_blank");
+            } else {
+                // Si hay varios archivos, mostrar un modal o lista
+                showFileSelectionModal(productName, files);
+            }
+        });
+    });
+});
+
+function showFileSelectionModal(productName, files) {
+    let modalContent = `<h3>Selecciona un archivo para descargar (${productName})</h3><ul>`;
+    files.forEach(file => {
+        modalContent += `<li><a href="${file}" target="_blank">${file.split("/").pop()}</a></li>`;
+    });
+    modalContent += "</ul>";
+    
+    const modal = document.createElement("div");
+    modal.innerHTML = `<div class="modal">${modalContent}<button onclick="this.parentElement.remove()">Cerrar</button></div>`;
+    document.body.appendChild(modal);
+}
+
+</script>
+
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".cafe-product-card").forEach((productCard) => {
+        const mainImage = productCard.querySelector(".cafe-product-main-image img");
+        const thumbnails = productCard.querySelectorAll(".cafe-product-thumbnail img");
+        const uniqueID = Math.random().toString(36).substr(2, 9);
+        mainImage.dataset.id = uniqueID;
+        
+        // Cambio de imagen al hacer clic en una miniatura
+        thumbnails.forEach((thumbnail) => {
+            thumbnail.addEventListener("click", function () {
+                mainImage.src = this.src;
+                productCard.querySelector(".cafe-product-thumbnail.active")?.classList.remove("active");
+                this.parentElement.classList.add("active");
+            });
+        });
+        
+        // Ampliar imagen al hacer clic en la imagen principal
+        mainImage.addEventListener("click", function () {
+            const overlay = document.createElement("div");
+            overlay.classList.add("image-overlay");
+            overlay.innerHTML = `<div class="overlay-content"><img src="${this.src}" alt="Expanded Image"><span class="close-btn">&times;</span></div>`;
+            document.body.appendChild(overlay);
+            
+            // Cerrar la imagen ampliada
+            overlay.querySelector(".close-btn").addEventListener("click", function () {
+                overlay.remove();
+            });
+        });
+    });
+});
+
+// CSS para la imagen ampliada (incluir en tu hoja de estilos)
+const style = document.createElement("style");
+style.innerHTML = `
+.image-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.overlay-content {
+    position: relative;
+}
+.overlay-content img {
+    max-width: 90%;
+    max-height: 90vh;
+    border-radius: 10px;
+}
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+`;
+document.head.appendChild(style);
+
+  </script>
   <script>
    class LandbotWhatsAppBtn {
   constructor({ dialcode, phone, text }) {
