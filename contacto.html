@@ -3,7 +3,41 @@
  <head>
 
   <script src="scripts/museredirect.js?4101519497" type="text/javascript"></script>
-  
+  <style>
+    /* Estilos para el botón de envío con temática de café */
+.boton-envio {
+  background-color: #6f4f37; /* Color marrón, como el café */
+  color: #fff; /* Texto blanco */
+  font-size: 16px; /* Tamaño de fuente */
+  font-weight: bold; /* Peso de fuente */
+  border: none; /* Sin bordes */
+  border-radius: 50px; /* Bordes redondeados */
+  padding: 12px 30px; /* Espaciado del botón */
+  cursor: pointer; /* El puntero se convierte en una mano */
+  transition: all 0.3s ease; /* Animación suave al hacer hover */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  text-transform: uppercase; /* Texto en mayúsculas */
+  letter-spacing: 1px; /* Espaciado entre letras */
+  font-family: 'Arial', sans-serif; /* Tipo de fuente */
+}
+
+.boton-envio:hover {
+  background-color: #3e2b1f; /* Un marrón más oscuro cuando se pasa el mouse */
+  transform: scale(1.05); /* Efecto de agrandar al hacer hover */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Sombra más intensa al pasar el mouse */
+}
+
+.boton-envio:active {
+  background-color: #2a1b14; /* Color de fondo cuando se presiona */
+  transform: scale(1); /* El botón vuelve a su tamaño original */
+}
+
+.boton-envio:focus {
+  outline: none; /* Elimina el borde de enfoque */
+  box-shadow: 0 0 10px rgba(255, 165, 0, 0.8); /* Resaltado naranja al hacer foco */
+}
+
+  </style>
   
   
   <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
@@ -105,12 +139,12 @@
   </label>
   <br>
   <!-- Otros campos del formulario -->
-  <button class="form-button-submit" type="submit">Enviar</button>
+  <button class="boton-envio form-button-submit" type="submit">Enviar</button>
+ 
 </form>
 
   </section>
-    <!--js-->
-    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <!--js--> 
   </body>
 </html>
 
