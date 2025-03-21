@@ -24,6 +24,124 @@
  <body>
 
   <div class="clearfix" id="page"><!-- column -->
+    
+
+
+<style>
+  /* Navbar */
+/* NAVBAR */
+.hamka-navbar {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important; /* Ocupar todo el ancho de la pantalla */
+    height: 107px !important;
+    background: #F8F1E1 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    z-index: 100000 !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+    overflow: hidden !important;
+}
+
+/* Contenedor centrado */
+.hamka-container {
+    width: 90% !important; /* Limita el contenido para que no desborde */
+    max-width: 1200px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+/* LOGO */
+.hamka-logo {
+    display: flex !important;
+    align-items: center !important;
+}
+
+.hamka-logo img {
+    height: 65px !important;
+    margin-right: 10px !important;
+}
+
+.hamka-brand {
+    font-family: 'Georgia', serif !important;
+    font-size: 24px !important;
+    font-weight: bold !important;
+    color: #603813 !important;
+}
+
+.hamka-brand small {
+    font-size: 14px !important;
+    color: #8B5E3B !important;
+}
+
+/* MENU */
+.hamka-menu {
+    list-style: none !important;
+    display: flex !important;
+    gap: 20px !important;
+}
+
+.hamka-menu li {
+    list-style: none !important;
+}
+
+.hamka-link {
+    text-decoration: none !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    color: #603813 !important;
+    transition: color 0.3s !important;
+}
+
+.hamka-link:hover,
+.hamka-link.active {
+    color: #c0885d !important;
+    text-decoration: underline !important;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+    .hamka-container {
+        flex-direction: column !important;
+        align-items: center !important;
+        height: auto !important;
+        padding: 10px 0 !important;
+    }
+
+    .hamka-menu {
+        flex-direction: column !important;
+        align-items: center !important;
+        padding-top: 10px !important;
+    }
+
+    .hamka-menu li {
+        margin: 5px 0 !important;
+    }
+}
+</style>
+
+<nav class="hamka-navbar">
+  <div class="hamka-container">
+      <div class="hamka-logo">
+          <img src="images/logo%20hamka.png" alt="Hamka Café">
+          <img src="images/logo%20hamka2.png" alt="Hamka Café">
+      </div>
+      <ul class="hamka-menu">
+          <li><a href="index.html" class="hamka-link">INICIO</a></li>
+          <li><a href="nosotros.html" class="hamka-link">NOSOTROS</a></li>
+          <li><a href="ventas.html" class="hamka-link">VENTAS</a></li>
+          <li><a href="alquiler.html" class="hamka-link">ALQUILER</a></li> 
+          <li><a href="coffee-export.html" class="hamka-link">COFFEE EXPORT</a></li>
+          <li><a href="contacto.html" class="hamka-link">CONTACTO</a></li>
+      </ul>
+  </div>
+</nav>
+
+
+
    <div class="position_content" id="page_position_content">
     <div class="browser_width mse_pre_init" id="u2752"><!-- simple frame --></div>
     <div class="clip_frame mse_pre_init" id="u2785"><!-- image -->
