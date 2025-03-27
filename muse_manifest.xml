@@ -1,10 +1,10 @@
 <manifest alg="2" build="30" opt="false" iceEnabled="true">
   <folder name="css">
     <file name="site_global.css" crc="3983832653"/>
-    <file name="master_a-p_gina-maestra.css" crc="3962737796" ref="respuesta:nosotros:ventas:alquiler:contacto:index"/>
+    <file name="master_a-p_gina-maestra.css" crc="3962737796" ref="respuesta:nosotros:VENTA:alquiler:contacto:index"/>
     <file name="respuesta.css" crc="4271532289" ref="respuesta"/>
     <file name="nosotros.css" crc="532295040" ref="nosotros"/>
-    <file name="ventas.css" crc="3908722090" ref="ventas"/>
+    <file name="VENTA.css" crc="3908722090" ref="VENTA"/>
     <file name="alquiler.css" crc="3993763871" ref="alquiler"/>
     <file name="contacto.css" crc="3969313851" ref="contacto"/>
     <file name="index.css" crc="69238024" ref="index"/>
@@ -17,30 +17,30 @@
     <file name="saeco-lirika-plus.pdf" crc="298982841" mt="1500724071000"/>
   </folder>
   <folder name="scripts">
-    <file name="jquery-1.8.3.min.js" crc="209076791" ref="phone>index:phone>nosotros:phone>ventas:phone>alquiler:phone>contacto:phone>respuesta:tablet>index:tablet>nosotros:tablet>ventas:tablet>alquiler:tablet>contacto:tablet>respuesta:index:nosotros:ventas:alquiler:contacto:respuesta"/>
-    <file name="museutils.js" crc="4291592202" ref="phone>index:phone>nosotros:phone>ventas:phone>alquiler:phone>contacto:phone>respuesta:tablet>index:tablet>nosotros:tablet>ventas:tablet>alquiler:tablet>contacto:tablet>respuesta:index:nosotros:ventas:alquiler:contacto:respuesta"/>
-    <file name="jquery.scrolleffects.js" crc="4006931061" ref="phone>index:phone>nosotros:phone>ventas:phone>alquiler:phone>contacto:phone>respuesta:tablet>index:tablet>nosotros:tablet>ventas:tablet>alquiler:tablet>contacto:tablet>respuesta:index:nosotros:ventas:alquiler:contacto:respuesta"/>
-    <file name="jquery.tobrowserwidth.js" crc="3842421675" ref="phone>index:phone>nosotros:phone>ventas:phone>alquiler:phone>contacto:phone>respuesta:tablet>index:tablet>nosotros:tablet>ventas:tablet>alquiler:tablet>contacto:tablet>respuesta:index:nosotros:ventas:alquiler:contacto:respuesta"/>
-    <file name="webpro.js" crc="3903299128" ref="phone>index:phone>nosotros:phone>ventas:phone>alquiler:phone>contacto:phone>respuesta:tablet>index:tablet>ventas:tablet>alquiler:index:ventas:alquiler"/>
-    <file name="musewpslideshow.js" crc="138381373" ref="phone>index:phone>nosotros:phone>ventas:phone>alquiler:phone>contacto:phone>respuesta:tablet>index:tablet>ventas:tablet>alquiler:index:ventas:alquiler"/>
-    <file name="jquery.museoverlay.js" crc="4250894771" ref="phone>index:phone>nosotros:phone>ventas:phone>alquiler:phone>contacto:phone>respuesta:tablet>index:tablet>ventas:tablet>alquiler:index:ventas:alquiler"/>
-    <file name="touchswipe.js" crc="4156838003" ref="phone>index:phone>nosotros:phone>ventas:phone>alquiler:phone>contacto:phone>respuesta:tablet>index:tablet>ventas:tablet>alquiler:index:ventas:alquiler"/>
-    <file name="jquery.musepolyfill.bgsize.js" crc="291134478" ref="phone>index:phone>nosotros:phone>ventas:phone>alquiler:phone>contacto:phone>respuesta:tablet>index:tablet>nosotros:tablet>ventas:tablet>alquiler:tablet>contacto:tablet>respuesta:index:nosotros:ventas:alquiler:contacto:respuesta"/>
-    <file name="pie.js" crc="3827607177" ref="phone>index:phone>ventas:phone>alquiler:phone>respuesta:tablet>index:tablet>ventas:tablet>alquiler:tablet>respuesta:index:ventas:alquiler:respuesta"/>
-    <file name="jquery.watch.js" crc="4068933136" ref="phone>index:phone>nosotros:phone>ventas:phone>alquiler:phone>contacto:phone>respuesta:tablet>index:tablet>nosotros:tablet>ventas:tablet>alquiler:tablet>contacto:tablet>respuesta:index:nosotros:ventas:alquiler:contacto:respuesta"/>
-    <file name="museredirect.js" crc="4101519497" ref="index:nosotros:ventas:alquiler:contacto:respuesta"/>
+    <file name="jquery-1.8.3.min.js" crc="209076791" ref="phone>index:phone>nosotros:phone>VENTA:phone>alquiler:phone>contacto:phone>respuesta:tablet>index:tablet>nosotros:tablet>VENTA:tablet>alquiler:tablet>contacto:tablet>respuesta:index:nosotros:VENTA:alquiler:contacto:respuesta"/>
+    <file name="museutils.js" crc="4291592202" ref="phone>index:phone>nosotros:phone>VENTA:phone>alquiler:phone>contacto:phone>respuesta:tablet>index:tablet>nosotros:tablet>VENTA:tablet>alquiler:tablet>contacto:tablet>respuesta:index:nosotros:VENTA:alquiler:contacto:respuesta"/>
+    <file name="jquery.scrolleffects.js" crc="4006931061" ref="phone>index:phone>nosotros:phone>VENTA:phone>alquiler:phone>contacto:phone>respuesta:tablet>index:tablet>nosotros:tablet>VENTA:tablet>alquiler:tablet>contacto:tablet>respuesta:index:nosotros:VENTA:alquiler:contacto:respuesta"/>
+    <file name="jquery.tobrowserwidth.js" crc="3842421675" ref="phone>index:phone>nosotros:phone>VENTA:phone>alquiler:phone>contacto:phone>respuesta:tablet>index:tablet>nosotros:tablet>VENTA:tablet>alquiler:tablet>contacto:tablet>respuesta:index:nosotros:VENTA:alquiler:contacto:respuesta"/>
+    <file name="webpro.js" crc="3903299128" ref="phone>index:phone>nosotros:phone>VENTA:phone>alquiler:phone>contacto:phone>respuesta:tablet>index:tablet>VENTA:tablet>alquiler:index:VENTA:alquiler"/>
+    <file name="musewpslideshow.js" crc="138381373" ref="phone>index:phone>nosotros:phone>VENTA:phone>alquiler:phone>contacto:phone>respuesta:tablet>index:tablet>VENTA:tablet>alquiler:index:VENTA:alquiler"/>
+    <file name="jquery.museoverlay.js" crc="4250894771" ref="phone>index:phone>nosotros:phone>VENTA:phone>alquiler:phone>contacto:phone>respuesta:tablet>index:tablet>VENTA:tablet>alquiler:index:VENTA:alquiler"/>
+    <file name="touchswipe.js" crc="4156838003" ref="phone>index:phone>nosotros:phone>VENTA:phone>alquiler:phone>contacto:phone>respuesta:tablet>index:tablet>VENTA:tablet>alquiler:index:VENTA:alquiler"/>
+    <file name="jquery.musepolyfill.bgsize.js" crc="291134478" ref="phone>index:phone>nosotros:phone>VENTA:phone>alquiler:phone>contacto:phone>respuesta:tablet>index:tablet>nosotros:tablet>VENTA:tablet>alquiler:tablet>contacto:tablet>respuesta:index:nosotros:VENTA:alquiler:contacto:respuesta"/>
+    <file name="pie.js" crc="3827607177" ref="phone>index:phone>VENTA:phone>alquiler:phone>respuesta:tablet>index:tablet>VENTA:tablet>alquiler:tablet>respuesta:index:VENTA:alquiler:respuesta"/>
+    <file name="jquery.watch.js" crc="4068933136" ref="phone>index:phone>nosotros:phone>VENTA:phone>alquiler:phone>contacto:phone>respuesta:tablet>index:tablet>nosotros:tablet>VENTA:tablet>alquiler:tablet>contacto:tablet>respuesta:index:nosotros:VENTA:alquiler:contacto:respuesta"/>
+    <file name="museredirect.js" crc="4101519497" ref="index:nosotros:VENTA:alquiler:contacto:respuesta"/>
   </folder>
   <folder name="images">
     <file name="favicon.ico" crc="380354864" ref="phone>index"/>
-    <file name="logo hamka.png" crc="3932242973" ref="phone>index:phone>nosotros:phone>ventas:phone>alquiler:phone>contacto:phone>respuesta:tablet>index:tablet>nosotros:tablet>ventas:tablet>alquiler:tablet>contacto:tablet>respuesta:index:nosotros:ventas:alquiler:contacto:respuesta"/>
-    <file name="logo hamka2.png" crc="3826473392" ref="phone>index:phone>nosotros:phone>ventas:phone>alquiler:phone>contacto:phone>respuesta:tablet>index:tablet>nosotros:tablet>ventas:tablet>alquiler:tablet>contacto:tablet>respuesta:index:nosotros:ventas:alquiler:contacto:respuesta"/>
-    <file name="icon menu.png" crc="93340711" ref="phone>index:phone>nosotros:phone>ventas:phone>alquiler:phone>contacto:phone>respuesta"/>
+    <file name="logo hamka.png" crc="3932242973" ref="phone>index:phone>nosotros:phone>VENTA:phone>alquiler:phone>contacto:phone>respuesta:tablet>index:tablet>nosotros:tablet>VENTA:tablet>alquiler:tablet>contacto:tablet>respuesta:index:nosotros:VENTA:alquiler:contacto:respuesta"/>
+    <file name="logo hamka2.png" crc="3826473392" ref="phone>index:phone>nosotros:phone>VENTA:phone>alquiler:phone>contacto:phone>respuesta:tablet>index:tablet>nosotros:tablet>VENTA:tablet>alquiler:tablet>contacto:tablet>respuesta:index:nosotros:VENTA:alquiler:contacto:respuesta"/>
+    <file name="icon menu.png" crc="93340711" ref="phone>index:phone>nosotros:phone>VENTA:phone>alquiler:phone>contacto:phone>respuesta"/>
     <file name="slide1.jpg" crc="4212425988" ref="phone>index:tablet>index:index"/>
-    <file name="blank.gif" crc="4208392903" ref="phone>index:phone>ventas:phone>alquiler:tablet>index:tablet>ventas:tablet>alquiler:index:ventas:alquiler"/>
+    <file name="blank.gif" crc="4208392903" ref="phone>index:phone>VENTA:phone>alquiler:tablet>index:tablet>VENTA:tablet>alquiler:index:VENTA:alquiler"/>
     <file name="slide2.jpg" crc="138347158" ref="phone>index:tablet>index:index"/>
     <file name="slide3.jpg" crc="466962549" ref="phone>index:tablet>index:index"/>
     <file name="slide4.jpg" crc="4103185770" ref="phone>index:tablet>index:index"/>
-    <file name="loading.gif" crc="3815509949" ref="phone>index:phone>ventas:phone>alquiler:tablet>index:tablet>ventas:tablet>alquiler:index:ventas:alquiler"/>
+    <file name="loading.gif" crc="3815509949" ref="phone>index:phone>VENTA:phone>alquiler:tablet>index:tablet>VENTA:tablet>alquiler:index:VENTA:alquiler"/>
     <file name="u1626-4.png" crc="334132559" ref="phone>index"/>
     <file name="icono tel1.png" crc="95501018" ref="phone>index:tablet>index:index"/>
     <file name="cafe en vaso1.jpg" crc="3924906675" ref="phone>index:tablet>index:index"/>
@@ -67,62 +67,62 @@
     <file name="logo rueda.png" crc="5169082" ref="phone>index:tablet>index:index"/>
     <file name="cafes1.png" crc="504666116" ref="phone>index:phone>contacto:phone>respuesta:tablet>index:tablet>contacto:tablet>respuesta:index:contacto:respuesta"/>
     <file name="fondo2.jpg" crc="424118935" ref="phone>index:tablet>index:index"/>
-    <file name="logo2 blan.png" crc="3839899525" ref="phone>index:phone>nosotros:phone>ventas:phone>alquiler:phone>contacto:phone>respuesta:tablet>index:tablet>nosotros:tablet>ventas:tablet>alquiler:tablet>contacto:tablet>respuesta:index:nosotros:ventas:alquiler:contacto:respuesta"/>
-    <file name="icono ubi.png" crc="194663026" ref="phone>index:phone>nosotros:phone>ventas:phone>alquiler:phone>contacto:phone>respuesta:tablet>index:tablet>nosotros:tablet>ventas:tablet>alquiler:tablet>contacto:tablet>respuesta:index:nosotros:ventas:alquiler:contacto:respuesta"/>
-    <file name="icono men.png" crc="4265872970" ref="phone>index:phone>nosotros:phone>ventas:phone>alquiler:phone>contacto:phone>respuesta:tablet>index:tablet>nosotros:tablet>ventas:tablet>alquiler:tablet>contacto:tablet>respuesta:index:nosotros:ventas:alquiler:contacto:respuesta"/>
-    <file name="icono cel.png" crc="519355248" ref="phone>index:phone>nosotros:phone>ventas:phone>alquiler:phone>contacto:phone>respuesta:tablet>index:tablet>nosotros:tablet>ventas:tablet>alquiler:tablet>contacto:tablet>respuesta:index:nosotros:ventas:alquiler:contacto:respuesta"/>
-    <file name="icono face.png" crc="229100728" ref="phone>index:phone>nosotros:phone>ventas:phone>alquiler:phone>contacto:phone>respuesta:tablet>index:tablet>nosotros:tablet>ventas:tablet>alquiler:tablet>contacto:tablet>respuesta:index:nosotros:ventas:alquiler:contacto:respuesta"/>
-    <file name="copy.png" crc="246632860" ref="phone>index:phone>nosotros:phone>ventas:phone>alquiler:phone>contacto:phone>respuesta:tablet>index:tablet>nosotros:tablet>ventas:tablet>alquiler:tablet>contacto:tablet>respuesta:index:nosotros:ventas:alquiler:contacto:respuesta"/>
-    <file name="nuevo logo1.png" crc="4259794381" ref="phone>index:phone>nosotros:phone>ventas:phone>alquiler:phone>contacto:phone>respuesta:tablet>index:tablet>nosotros:tablet>ventas:tablet>alquiler:tablet>contacto:tablet>respuesta:index:nosotros:ventas:alquiler:contacto:respuesta"/>
+    <file name="logo2 blan.png" crc="3839899525" ref="phone>index:phone>nosotros:phone>VENTA:phone>alquiler:phone>contacto:phone>respuesta:tablet>index:tablet>nosotros:tablet>VENTA:tablet>alquiler:tablet>contacto:tablet>respuesta:index:nosotros:VENTA:alquiler:contacto:respuesta"/>
+    <file name="icono ubi.png" crc="194663026" ref="phone>index:phone>nosotros:phone>VENTA:phone>alquiler:phone>contacto:phone>respuesta:tablet>index:tablet>nosotros:tablet>VENTA:tablet>alquiler:tablet>contacto:tablet>respuesta:index:nosotros:VENTA:alquiler:contacto:respuesta"/>
+    <file name="icono men.png" crc="4265872970" ref="phone>index:phone>nosotros:phone>VENTA:phone>alquiler:phone>contacto:phone>respuesta:tablet>index:tablet>nosotros:tablet>VENTA:tablet>alquiler:tablet>contacto:tablet>respuesta:index:nosotros:VENTA:alquiler:contacto:respuesta"/>
+    <file name="icono cel.png" crc="519355248" ref="phone>index:phone>nosotros:phone>VENTA:phone>alquiler:phone>contacto:phone>respuesta:tablet>index:tablet>nosotros:tablet>VENTA:tablet>alquiler:tablet>contacto:tablet>respuesta:index:nosotros:VENTA:alquiler:contacto:respuesta"/>
+    <file name="icono face.png" crc="229100728" ref="phone>index:phone>nosotros:phone>VENTA:phone>alquiler:phone>contacto:phone>respuesta:tablet>index:tablet>nosotros:tablet>VENTA:tablet>alquiler:tablet>contacto:tablet>respuesta:index:nosotros:VENTA:alquiler:contacto:respuesta"/>
+    <file name="copy.png" crc="246632860" ref="phone>index:phone>nosotros:phone>VENTA:phone>alquiler:phone>contacto:phone>respuesta:tablet>index:tablet>nosotros:tablet>VENTA:tablet>alquiler:tablet>contacto:tablet>respuesta:index:nosotros:VENTA:alquiler:contacto:respuesta"/>
+    <file name="nuevo logo1.png" crc="4259794381" ref="phone>index:phone>nosotros:phone>VENTA:phone>alquiler:phone>contacto:phone>respuesta:tablet>index:tablet>nosotros:tablet>VENTA:tablet>alquiler:tablet>contacto:tablet>respuesta:index:nosotros:VENTA:alquiler:contacto:respuesta"/>
     <file name="page1.jpg" crc="178597827" ref="phone>nosotros:tablet>nosotros:nosotros"/>
-    <file name="icon tele1.png" crc="276708780" ref="phone>nosotros:phone>ventas:phone>alquiler:phone>contacto:phone>respuesta:tablet>nosotros:tablet>ventas:tablet>alquiler:tablet>contacto:tablet>respuesta:nosotros:ventas:alquiler:contacto:respuesta"/>
-    <file name="icono_men3.png" crc="171197778" ref="phone>nosotros:phone>ventas:phone>alquiler:phone>contacto:phone>respuesta:tablet>nosotros:tablet>ventas:tablet>alquiler:tablet>contacto:tablet>respuesta:nosotros:ventas:alquiler:contacto:respuesta"/>
+    <file name="icon tele1.png" crc="276708780" ref="phone>nosotros:phone>VENTA:phone>alquiler:phone>contacto:phone>respuesta:tablet>nosotros:tablet>VENTA:tablet>alquiler:tablet>contacto:tablet>respuesta:nosotros:VENTA:alquiler:contacto:respuesta"/>
+    <file name="icono_men3.png" crc="171197778" ref="phone>nosotros:phone>VENTA:phone>alquiler:phone>contacto:phone>respuesta:tablet>nosotros:tablet>VENTA:tablet>alquiler:tablet>contacto:tablet>respuesta:nosotros:VENTA:alquiler:contacto:respuesta"/>
     <file name="u1916-4.png" crc="484250437" ref="phone>nosotros"/>
     <file name="logo hamka3.png" crc="4222973346" ref="phone>nosotros:tablet>nosotros:nosotros"/>
-    <file name="page4.jpg" crc="3778002011" ref="phone>ventas:tablet>ventas:ventas"/>
-    <file name="u1971-4.png" crc="54882074" ref="phone>ventas"/>
-    <file name="minuto1.jpg" crc="3929508614" ref="phone>ventas:tablet>ventas:ventas"/>
-    <file name="minuto2.jpg" crc="4211476078" ref="phone>ventas:tablet>ventas:ventas"/>
-    <file name="minuto3.jpg" crc="4233835236" ref="phone>ventas:tablet>ventas:ventas"/>
-    <file name="minuto4.jpg" crc="346666995" ref="phone>ventas:tablet>ventas:ventas"/>
-    <file name="minuto5.jpg" crc="9057911" ref="phone>ventas:tablet>ventas:ventas"/>
-    <file name="minuto6.jpg" crc="3868074067" ref="phone>ventas:tablet>ventas:ventas"/>
-    <file name="minuto198x98.jpg" crc="3979446287" ref="phone>ventas"/>
-    <file name="minuto298x98.jpg" crc="440785106" ref="phone>ventas"/>
-    <file name="minuto398x98.jpg" crc="3762781965" ref="phone>ventas"/>
-    <file name="minuto498x98.jpg" crc="4050390756" ref="phone>ventas"/>
-    <file name="minuto598x98.jpg" crc="298798461" ref="phone>ventas"/>
-    <file name="minuto698x98.jpg" crc="4057046285" ref="phone>ventas"/>
-    <file name="minutocafe.jpg" crc="3928000053" ref="phone>ventas:tablet>ventas:ventas"/>
-    <file name="pico-baristo1.jpg" crc="4085543502" ref="phone>ventas:tablet>ventas:ventas"/>
-    <file name="pico-baristo2.jpg" crc="332466062" ref="phone>ventas:tablet>ventas:ventas"/>
-    <file name="pico-baristo3.jpg" crc="78782527" ref="phone>ventas:tablet>ventas:ventas"/>
-    <file name="pico-baristo198x98.jpg" crc="385392544" ref="phone>ventas"/>
-    <file name="pico-baristo298x98.jpg" crc="127937920" ref="phone>ventas"/>
-    <file name="pico-baristo398x98.jpg" crc="95829714" ref="phone>ventas"/>
-    <file name="pico-baristo-cafe.jpg" crc="4086067880" ref="phone>ventas:tablet>ventas:ventas"/>
-    <file name="lirika1.jpg" crc="4196664278" ref="phone>ventas:tablet>ventas:ventas"/>
-    <file name="lirika2.jpg" crc="60022881" ref="phone>ventas:tablet>ventas:ventas"/>
-    <file name="lirika3.jpg" crc="3788883294" ref="phone>ventas:tablet>ventas:ventas"/>
-    <file name="lirika4.jpg" crc="86152994" ref="phone>ventas:tablet>ventas:ventas"/>
-    <file name="lirika5.jpg" crc="72462937" ref="phone>ventas:tablet>ventas:ventas"/>
-    <file name="lirika198x98.jpg" crc="456444647" ref="phone>ventas"/>
-    <file name="lirika298x98.jpg" crc="3947300404" ref="phone>ventas"/>
-    <file name="lirika398x98.jpg" crc="476391660" ref="phone>ventas"/>
-    <file name="lirika498x98.jpg" crc="4242125954" ref="phone>ventas"/>
-    <file name="lirika598x98.jpg" crc="245478485" ref="phone>ventas"/>
-    <file name="lirikacafe.jpg" crc="3889765411" ref="phone>ventas:tablet>ventas:ventas"/>
-    <file name="otc1.jpg" crc="4049695817" ref="phone>ventas:tablet>ventas:ventas"/>
-    <file name="otc2.jpg" crc="316380620" ref="phone>ventas:tablet>ventas:ventas"/>
-    <file name="otc3.jpg" crc="3998213332" ref="phone>ventas:tablet>ventas:ventas"/>
-    <file name="otc4.jpg" crc="169906820" ref="phone>ventas:tablet>ventas:ventas"/>
-    <file name="otc5.jpg" crc="119459572" ref="phone>ventas:tablet>ventas:ventas"/>
-    <file name="otc198x98.jpg" crc="427686479" ref="phone>ventas"/>
-    <file name="otc298x98.jpg" crc="354825716" ref="phone>ventas"/>
-    <file name="otc398x98.jpg" crc="266499132" ref="phone>ventas"/>
-    <file name="otc498x98.jpg" crc="4158884606" ref="phone>ventas"/>
-    <file name="otc598x98.jpg" crc="114720099" ref="phone>ventas"/>
-    <file name="otccafe.jpg" crc="322466975" ref="phone>ventas:tablet>ventas:ventas"/>
+    <file name="page4.jpg" crc="3778002011" ref="phone>VENTA:tablet>VENTA:VENTA"/>
+    <file name="u1971-4.png" crc="54882074" ref="phone>VENTA"/>
+    <file name="minuto1.jpg" crc="3929508614" ref="phone>VENTA:tablet>VENTA:VENTA"/>
+    <file name="minuto2.jpg" crc="4211476078" ref="phone>VENTA:tablet>VENTA:VENTA"/>
+    <file name="minuto3.jpg" crc="4233835236" ref="phone>VENTA:tablet>VENTA:VENTA"/>
+    <file name="minuto4.jpg" crc="346666995" ref="phone>VENTA:tablet>VENTA:VENTA"/>
+    <file name="minuto5.jpg" crc="9057911" ref="phone>VENTA:tablet>VENTA:VENTA"/>
+    <file name="minuto6.jpg" crc="3868074067" ref="phone>VENTA:tablet>VENTA:VENTA"/>
+    <file name="minuto198x98.jpg" crc="3979446287" ref="phone>VENTA"/>
+    <file name="minuto298x98.jpg" crc="440785106" ref="phone>VENTA"/>
+    <file name="minuto398x98.jpg" crc="3762781965" ref="phone>VENTA"/>
+    <file name="minuto498x98.jpg" crc="4050390756" ref="phone>VENTA"/>
+    <file name="minuto598x98.jpg" crc="298798461" ref="phone>VENTA"/>
+    <file name="minuto698x98.jpg" crc="4057046285" ref="phone>VENTA"/>
+    <file name="minutocafe.jpg" crc="3928000053" ref="phone>VENTA:tablet>VENTA:VENTA"/>
+    <file name="pico-baristo1.jpg" crc="4085543502" ref="phone>VENTA:tablet>VENTA:VENTA"/>
+    <file name="pico-baristo2.jpg" crc="332466062" ref="phone>VENTA:tablet>VENTA:VENTA"/>
+    <file name="pico-baristo3.jpg" crc="78782527" ref="phone>VENTA:tablet>VENTA:VENTA"/>
+    <file name="pico-baristo198x98.jpg" crc="385392544" ref="phone>VENTA"/>
+    <file name="pico-baristo298x98.jpg" crc="127937920" ref="phone>VENTA"/>
+    <file name="pico-baristo398x98.jpg" crc="95829714" ref="phone>VENTA"/>
+    <file name="pico-baristo-cafe.jpg" crc="4086067880" ref="phone>VENTA:tablet>VENTA:VENTA"/>
+    <file name="lirika1.jpg" crc="4196664278" ref="phone>VENTA:tablet>VENTA:VENTA"/>
+    <file name="lirika2.jpg" crc="60022881" ref="phone>VENTA:tablet>VENTA:VENTA"/>
+    <file name="lirika3.jpg" crc="3788883294" ref="phone>VENTA:tablet>VENTA:VENTA"/>
+    <file name="lirika4.jpg" crc="86152994" ref="phone>VENTA:tablet>VENTA:VENTA"/>
+    <file name="lirika5.jpg" crc="72462937" ref="phone>VENTA:tablet>VENTA:VENTA"/>
+    <file name="lirika198x98.jpg" crc="456444647" ref="phone>VENTA"/>
+    <file name="lirika298x98.jpg" crc="3947300404" ref="phone>VENTA"/>
+    <file name="lirika398x98.jpg" crc="476391660" ref="phone>VENTA"/>
+    <file name="lirika498x98.jpg" crc="4242125954" ref="phone>VENTA"/>
+    <file name="lirika598x98.jpg" crc="245478485" ref="phone>VENTA"/>
+    <file name="lirikacafe.jpg" crc="3889765411" ref="phone>VENTA:tablet>VENTA:VENTA"/>
+    <file name="otc1.jpg" crc="4049695817" ref="phone>VENTA:tablet>VENTA:VENTA"/>
+    <file name="otc2.jpg" crc="316380620" ref="phone>VENTA:tablet>VENTA:VENTA"/>
+    <file name="otc3.jpg" crc="3998213332" ref="phone>VENTA:tablet>VENTA:VENTA"/>
+    <file name="otc4.jpg" crc="169906820" ref="phone>VENTA:tablet>VENTA:VENTA"/>
+    <file name="otc5.jpg" crc="119459572" ref="phone>VENTA:tablet>VENTA:VENTA"/>
+    <file name="otc198x98.jpg" crc="427686479" ref="phone>VENTA"/>
+    <file name="otc298x98.jpg" crc="354825716" ref="phone>VENTA"/>
+    <file name="otc398x98.jpg" crc="266499132" ref="phone>VENTA"/>
+    <file name="otc498x98.jpg" crc="4158884606" ref="phone>VENTA"/>
+    <file name="otc598x98.jpg" crc="114720099" ref="phone>VENTA"/>
+    <file name="otccafe.jpg" crc="322466975" ref="phone>VENTA:tablet>VENTA:VENTA"/>
     <file name="page3.jpg" crc="163951421" ref="phone>alquiler:tablet>alquiler:alquiler"/>
     <file name="u2034-4.png" crc="4204707859" ref="phone>alquiler"/>
     <file name="alquiler1.jpg" crc="240435574" ref="phone>alquiler:tablet>alquiler:alquiler"/>
@@ -145,7 +145,7 @@
     <file name="u1229-4.png" crc="245456458" ref="tablet>index"/>
     <file name="u1142-6.png" crc="3785151011" ref="tablet>index"/>
     <file name="u1286-4.png" crc="4230465570" ref="tablet>nosotros"/>
-    <file name="u1309-4.png" crc="188741292" ref="tablet>ventas"/>
+    <file name="u1309-4.png" crc="188741292" ref="tablet>VENTA"/>
     <file name="u1342-4.png" crc="4083435277" ref="tablet>alquiler"/>
     <file name="u1382-4.png" crc="396868751" ref="tablet>contacto"/>
     <file name="u2834-4.png" crc="396868751" ref="tablet>respuesta"/>
@@ -153,16 +153,16 @@
     <file name="u243-6.png" crc="3785151011" ref="index"/>
     <file name="u598-4.png" crc="245456458" ref="index"/>
     <file name="u763-4.png" crc="4230465570" ref="nosotros"/>
-    <file name="u766-4.png" crc="188741292" ref="ventas"/>
+    <file name="u766-4.png" crc="188741292" ref="VENTA"/>
     <file name="u767-4.png" crc="4083435277" ref="alquiler"/>
     <file name="u768-4.png" crc="396868751" ref="contacto"/>
     <file name="u2746-4.png" crc="396868751" ref="respuesta"/>
   </folder>
   <folder name="tablet">
     <folder name="css">
-      <file name="master_a-p_gina-maestra.css" crc="4093708448" ref="tablet>nosotros:tablet>ventas:tablet>alquiler:tablet>contacto:tablet>respuesta:tablet>index"/>
+      <file name="master_a-p_gina-maestra.css" crc="4093708448" ref="tablet>nosotros:tablet>VENTA:tablet>alquiler:tablet>contacto:tablet>respuesta:tablet>index"/>
       <file name="nosotros.css" crc="4123723261" ref="tablet>nosotros"/>
-      <file name="ventas.css" crc="13618839" ref="tablet>ventas"/>
+      <file name="VENTA.css" crc="13618839" ref="tablet>VENTA"/>
       <file name="alquiler.css" crc="29109253" ref="tablet>alquiler"/>
       <file name="contacto.css" crc="3912790084" ref="tablet>contacto"/>
       <file name="respuesta.css" crc="3786480324" ref="tablet>respuesta"/>
@@ -170,31 +170,31 @@
     </folder>
     <file name="index.html" crc="449812787" mt="1567544513715" redirect="true"/>
     <file name="nosotros.html" crc="3925570153" mt="1567544513715" redirect="true"/>
-    <file name="ventas.html" crc="4084309648" mt="1567544513731" redirect="true"/>
+    <file name="VENTA.html" crc="4084309648" mt="1567544513731" redirect="true"/>
     <file name="alquiler.html" crc="477289398" mt="1567544513731" redirect="true"/>
     <file name="contacto.html" crc="80334200" mt="1567544513747" redirect="true"/>
     <file name="respuesta.html" crc="3996376008" mt="1567544513747" redirect="true"/>
   </folder>
   <folder name="phone">
     <folder name="css">
-      <file name="master_a-p_gina-maestra.css" crc="352625426" ref="phone>respuesta:phone>nosotros:phone>ventas:phone>alquiler:phone>contacto:phone>index"/>
+      <file name="master_a-p_gina-maestra.css" crc="352625426" ref="phone>respuesta:phone>nosotros:phone>VENTA:phone>alquiler:phone>contacto:phone>index"/>
       <file name="respuesta.css" crc="4128132039" ref="phone>respuesta"/>
       <file name="nosotros.css" crc="466213571" ref="phone>nosotros"/>
-      <file name="ventas.css" crc="443085853" ref="phone>ventas"/>
+      <file name="VENTA.css" crc="443085853" ref="phone>VENTA"/>
       <file name="alquiler.css" crc="4004928467" ref="phone>alquiler"/>
       <file name="contacto.css" crc="421818726" ref="phone>contacto"/>
       <file name="index.css" crc="135230129" ref="phone>index"/>
     </folder>
     <file name="index.html" crc="4288191842" mt="1567544683928" redirect="true"/>
     <file name="nosotros.html" crc="4058030647" mt="1567544683944" redirect="true"/>
-    <file name="ventas.html" crc="4129762085" mt="1567544683944" redirect="true"/>
+    <file name="VENTA.html" crc="4129762085" mt="1567544683944" redirect="true"/>
     <file name="alquiler.html" crc="4275645962" mt="1567544683959" redirect="true"/>
     <file name="contacto.html" crc="75969443" mt="1567544683959" redirect="true"/>
     <file name="respuesta.html" crc="4268216386" mt="1567544683959" redirect="true"/>
   </folder>
   <file name="index.html" crc="41292571" mt="1567544387341" redirect="true"/>
   <file name="nosotros.html" crc="3968396230" mt="1567544387341" redirect="true"/>
-  <file name="ventas.html" crc="4069286206" mt="1567544387357" redirect="true"/>
+  <file name="VENTA.html" crc="4069286206" mt="1567544387357" redirect="true"/>
   <file name="alquiler.html" crc="166529721" mt="1567544387357" redirect="true"/>
   <file name="contacto.html" crc="174256417" mt="1567544387357" redirect="true"/>
   <file name="respuesta.html" crc="490890305" mt="1567544387373" redirect="true"/>
