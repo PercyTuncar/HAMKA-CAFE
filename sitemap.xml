@@ -803,12 +803,12 @@
     <xhtml:link rel="alternate" media="only screen and (max-device-width: 960px)" href="http://www.hamkacafe.com/tablet/nosotros.html"/>
   </url>
   <url>
-    <loc>http://www.hamkacafe.com/VENTA.html</loc>
+    <loc>http://www.hamkacafe.com/venta.html</loc>
     <lastmod>2019-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-    <xhtml:link rel="alternate" media="only screen and (max-device-width: 370px)" href="http://www.hamkacafe.com/phone/VENTA.html"/>
-    <xhtml:link rel="alternate" media="only screen and (max-device-width: 960px)" href="http://www.hamkacafe.com/tablet/VENTA.html"/>
+    <xhtml:link rel="alternate" media="only screen and (max-device-width: 370px)" href="http://www.hamkacafe.com/phone/venta.html"/>
+    <xhtml:link rel="alternate" media="only screen and (max-device-width: 960px)" href="http://www.hamkacafe.com/tablet/venta.html"/>
   </url>
   <url>
     <loc>http://www.hamkacafe.com/alquiler.html</loc>
