@@ -1,1568 +1,1198 @@
 <!DOCTYPE html>
-<html class="html">
- <head>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamka Café - Venta de Equipos</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #603813;
+            --secondary: #8B5E3B;
+            --accent: #c0885d;
+            --light: #F8F1E1;
+            --white: #ffffff;
+            --dark: #333333;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
 
-  <script src="scripts/museredirect.js?4101519497" type="text/javascript"></script>
-  
- <style>
- 
-    :root {
-        --cafe-primary-color: #654321;
-        --cafe-secondary-color: #8B4513;
-        --cafe-accent-color: #d4a76a;
-        --cafe-text-color: #333;
-        --cafe-light-bg: #f9f5f0;
-        --cafe-white: #fff;
-    }
- 
-    .cafe-container {
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 15px;
-    }
-    
-    .cafe-header {
-        background-color: var(--cafe-white);
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        padding: 15px 0;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-    }
-    
-    .cafe-logo-wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 10px 0;
-    }
-    
-    .cafe-logo-image {
-        height: 80px;
-    }
-    
-    .cafe-navigation {
-        display: flex;
-        justify-content: center;
-        padding: 10px 0;
-        border-bottom: 1px solid var(--cafe-accent-color);
-    }
-    
-    .cafe-nav-list {
-        display: flex;
-        list-style: none;
-    }
-    
-    .cafe-nav-item {
-        margin: 0 15px;
-    }
-    
-    .cafe-nav-link {
-        text-decoration: none;
-        color: var(--cafe-primary-color);
-        font-weight: 600;
-        text-transform: uppercase;
-        padding: 10px 5px;
-        transition: color 0.3s;
-    }
-    
-    .cafe-nav-link:hover {
-        color: var(--cafe-accent-color);
-    }
-    
-    .cafe-hero-section {
-        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/api/placeholder/1200/400') center/cover no-repeat;
-        color: var(--cafe-white);
-        padding: 100px 20px;
-        text-align: center;
-        margin-bottom: 40px;
-    }
-    
-    .cafe-hero-heading {
-        font-size: 2.5rem;
-        margin-bottom: 20px;
-    }
-    
-    .cafe-hero-text {
-        font-size: 1.2rem;
-        max-width: 600px;
-        margin: 0 auto;
-    }
-    
-    .cafe-section-heading {
-        text-align: center;
-        font-size: 2rem;
-        margin: 40px 0;
-        color: var(--cafe-primary-color);
-    }
-    
-    .cafe-product-card {
-        background-color: var(--cafe-white);
-        border-radius: 8px;
-        overflow: hidden;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        margin-bottom: 50px;
-        display: flex;
-        flex-direction: row;
-    }
-    
-    .cafe-product-gallery {
-        width: 40%;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .cafe-product-main-image {
-        height: 300px;
-        background-color: var(--cafe-light-bg);
-        margin-bottom: 15px;
-        border-radius: 8px;
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .cafe-product-main-image img {
-        max-width: 100%;
-        max-height: 100%;
-        object-fit: contain;
-    }
-    
-    .cafe-product-thumbnails {
-        display: flex;
-        gap: 10px;
-        overflow-x: auto;
-        padding-bottom: 10px;
-    }
-    
-    .cafe-product-thumbnail {
-        width: 80px;
-        height: 80px;
-        border-radius: 4px;
-        cursor: pointer;
-        border: 2px solid transparent;
-        background-color: var(--cafe-light-bg);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .cafe-product-thumbnail.active {
-        border-color: var(--cafe-accent-color);
-    }
-    
-    .cafe-product-thumbnail img {
-        max-width: 100%;
-        max-height: 100%;
-        object-fit: contain;
-    }
-    
-    .cafe-product-details {
-        width: 60%;
-        padding: 30px;
-    }
-    
-    .cafe-product-title {
-        font-size: 1.8rem;
-        color: var(--cafe-primary-color);
-        margin-bottom: 20px;
-        border-bottom: 2px solid var(--cafe-accent-color);
-        padding-bottom: 10px;
-    }
-    
-    .cafe-product-description {
-        margin-bottom: 20px;
-        font-size: 1rem;
-        color: var(--cafe-text-color);
-    }
-    
-    .cafe-specs-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-bottom: 25px;
-    }
-    
-    .cafe-specs-table tr:nth-child(even) {
-        background-color: var(--cafe-light-bg);
-    }
-    
-    .cafe-specs-table td {
-        padding: 10px;
-        border-bottom: 1px solid #eee;
-    }
-    
-    .cafe-specs-table td:first-child {
-        font-weight: 600;
-        width: 50%;
-    }
-    
-    .cafe-action-button {
-        display: inline-block;
-        padding: 12px 25px;
-        background-color: var(--cafe-primary-color);
-        color: var(--cafe-white);
-        text-decoration: none;
-        border-radius: 5px;
-        font-weight: 600;
-        transition: background-color 0.3s;
-        text-align: center;
-        margin-right: 10px;
-    }
-    
-    .cafe-action-button:hover {
-        background-color: var(--cafe-secondary-color);
-    }
-    
-    .cafe-action-button-alt {
-        background-color: var(--cafe-accent-color);
-    }
-    
-    .cafe-action-button-alt:hover {
-        background-color: var(--cafe-secondary-color);
-    }
-    
-    .cafe-button-group {
-        display: flex;
-        gap: 10px;
-    }
-    
-    .cafe-info-card {
-        background-color: var(--cafe-accent-color);
-        color: var(--cafe-white);
-        padding: 20px;
-        border-radius: 8px;
-        margin: 40px 0;
-    }
-    
-    .cafe-info-card-title {
-        margin-bottom: 10px;
-        font-size: 1.5rem;
-    }
-    
-    .cafe-footer {
-        background-color: var(--cafe-primary-color);
-        color: var(--cafe-white);
-        padding: 30px 0;
-        text-align: center;
-        margin-top: 40px;
-    }
-    
-    .cafe-social-links {
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-        margin: 20px 0;
-    }
-    
-    .cafe-social-link {
-        color: var(--cafe-white);
-        font-size: 1.5rem;
-    }
-    
-    .cafe-whatsapp-float {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background-color: #25D366;
-        color: white;
-        border-radius: 50px;
-        padding: 10px 20px;
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        z-index: 999;
-    }
-    
-    .cafe-whatsapp-float span {
-        margin-left: 8px;
-    }
-    
-    /* Responsive styles */
-    @media (max-width: 992px) {
-        .cafe-product-card {
-            flex-direction: column;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        
-        .cafe-product-gallery, .cafe-product-details {
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark);
+            background-color: #fff;
+            line-height: 1.6;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
             width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
-    }
-    
-    @media (max-width: 768px) {
-        .cafe-nav-list {
-            flex-direction: column;
+
+        /* Header & Navigation */
+        .header {
+            background-color: var(--light);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+            height: 120px; /* Aumentado de la altura predeterminada */
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0; /* Aumentado el padding */
+            height: 100%;
+        }
+
+        .logo {
+            display: flex;
             align-items: center;
         }
-        
-        .cafe-nav-item {
-            margin: 5px 0;
+
+        .logo img {
+            height: 70px; /* Aumentado el tamaño del logo */
+            margin-right: 10px;
         }
-        
-        .cafe-hero-heading {
+
+        .nav-menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-link {
+            color: var(--primary);
+            font-weight: 600;
+            padding: 5px 10px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+
+        .mobile-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/logo%20hamka.png') center/cover no-repeat;
+            color: var(--white);
+            padding: 180px 0 80px; /* Aumentado el padding superior para compensar el header más alto */
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .hero-contact {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .hero-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--white);
+        }
+
+        .hero-contact-item i {
+            color: var(--accent);
+        }
+
+        /* Section Titles */
+        .section-title {
+            text-align: center;
             font-size: 2rem;
+            margin: 40px 0;
+            color: var(--primary);
+            position: relative;
         }
-        
-        .cafe-product-title {
-            font-size: 1.5rem;
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent);
+            margin: 10px auto 0;
         }
-        
-        .cafe-button-group {
-            flex-direction: column;
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
-        
-        .cafe-action-button {
+
+        /* Product Cards */
+        .products {
+            padding: 40px 0;
+        }
+
+        .product-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            margin-bottom: 40px;
+            display: flex;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-gallery {
+            width: 40%;
+            padding: 20px;
+        }
+
+        .product-main-image {
+            height: 300px;
+            background-color: var(--light);
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .product-main-image img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .product-thumbnails {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+        }
+
+        .product-thumbnail {
+            width: 70px;
+            height: 70px;
+            border-radius: 4px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            background-color: var(--light);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: border-color 0.3s ease;
+        }
+
+        .product-thumbnail.active {
+            border-color: var(--accent);
+        }
+
+        .product-thumbnail img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .product-details {
+            width: 60%;
+            padding: 30px;
+        }
+
+        .product-title {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 10px;
+        }
+
+        .product-description {
+            margin-bottom: 20px;
+            font-size: 1rem;
+            color: var(--dark);
+        }
+
+        .specs-table {
             width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 25px;
+        }
+
+        .specs-table tr:nth-child(even) {
+            background-color: var(--light);
+        }
+
+        .specs-table td {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .specs-table td:first-child {
+            font-weight: 600;
+            width: 50%;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: var(--primary);
+            color: var(--white);
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary);
+        }
+
+        .btn-alt {
+            background-color: var(--accent);
+        }
+
+        /* Info Card */
+        .info-card {
+            background-color: var(--light);
+            border-left: 5px solid var(--accent);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 40px 0;
+        }
+
+        .info-card-title {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 50px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .footer-logo img {
+            height: 70px;
+            margin-bottom: 15px;
+        }
+
+        .footer-contact {
+            margin-bottom: 20px;
+        }
+
+        .footer-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
             margin-bottom: 10px;
         }
-    }
-</style> 
-  <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
-  <meta name="generator" content="7.4.30.244"/>
-  <link rel="shortcut icon" href="images/favicon.ico?380354864"/>
-  <title>VENTA</title>
-  <link media="only screen and (max-device-width: 370px)" rel="alternate" href="http://www.hamkacafe.com/phone/venta.html"/>
-  <link media="only screen and (max-device-width: 960px)" rel="alternate" href="http://www.hamkacafe.com/tablet/venta.html"/>
-  <!-- CSS -->
-  <link rel="stylesheet" type="text/css" href="css/site_global.css?3983832653"/>
-  <link rel="stylesheet" type="text/css" href="css/master_a-p_gina-maestra.css?3962737796"/>
-  <link rel="stylesheet" type="text/css" href="css/VENTA.css?3908722090" id="pagesheet"/>
-  <!-- Other scripts -->
-  <script type="text/javascript">
-   document.documentElement.className += ' js';
-</script>
-   </head>
- <body>
-<div>
-   <title>WhatsApp Responsive Button</title>
 
+        .footer-links h3 {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
 
-</div>
-  <div class="clearfix" id="page"><!-- column -->
-    
+        .footer-link {
+            display: block;
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
 
+        .footer-link:hover {
+            color: var(--accent);
+        }
 
-<style>
-  /* Navbar */
-/* NAVBAR */
-.hamka-navbar {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100vw !important; /* Ocupar todo el ancho de la pantalla */
-    height: 107px !important;
-    background: #F8F1E1 !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    z-index: 100000 !important;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
-    overflow: hidden !important;
-}
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
 
-/* Contenedor centrado */
-.hamka-container {
-    width: 90% !important; /* Limita el contenido para que no desborde */
-    max-width: 1200px !important;
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-}
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--secondary);
+            border-radius: 50%;
+            transition: background-color 0.3s;
+        }
 
-/* LOGO */
-.hamka-logo {
-    display: flex !important;
-    align-items: center !important;
-}
+        .social-link:hover {
+            background-color: var(--accent);
+        }
 
-.hamka-logo img {
-    height: 65px !important;
-    margin-right: 10px !important;
-}
+        .copyright {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
 
-.hamka-brand {
-    font-family: 'Georgia', serif !important;
-    font-size: 24px !important;
-    font-weight: bold !important;
-    color: #603813 !important;
-}
+        /* WhatsApp Float Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50px;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            z-index: 999;
+            transition: all 0.3s ease;
+        }
 
-.hamka-brand small {
-    font-size: 14px !important;
-    color: #8B5E3B !important;
-}
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.05);
+        }
 
-/* MENU */
-.hamka-menu {
-    list-style: none !important;
-    display: flex !important;
-    gap: 20px !important;
-}
+        .whatsapp-float i {
+            font-size: 24px;
+            margin-right: 8px;
+        }
 
-.hamka-menu li {
-    list-style: none !important;
-}
+        /* Modal for PDF Viewer */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1001;
+            justify-content: center;
+            align-items: center;
+        }
 
-.hamka-link {
-    text-decoration: none !important;
-    font-size: 16px !important;
-    font-weight: bold !important;
-    color: #603813 !important;
-    transition: color 0.3s !important;
-}
+        .modal-content {
+            background-color: var(--white);
+            width: 90%;
+            max-width: 800px;
+            height: 80vh;
+            border-radius: 10px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
 
-.hamka-link:hover,
-.hamka-link.active {
-    color: #c0885d !important;
-    text-decoration: underline !important;
-}
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            background-color: #ff4444;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
 
-/* RESPONSIVE */
-@media screen and (max-width: 768px) {
-    .hamka-container {
-        flex-direction: column !important;
-        align-items: center !important;
-        height: auto !important;
-        padding: 10px 0 !important;
-    }
+        #pdfViewer {
+            width: 100%;
+            height: 90%;
+            border: none;
+        }
 
-    .hamka-menu {
-        flex-direction: column !important;
-        align-items: center !important;
-        padding-top: 10px !important;
-    }
+        #pdfControls {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
 
-    .hamka-menu li {
-        margin: 5px 0 !important;
-    }
-}
-</style>
+        #pdfControls button {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 14px;
+        }
 
-<nav class="hamka-navbar">
-  <div class="hamka-container">
-      <div class="hamka-logo">
-          <img src="images/logo%20hamka.png" alt="Hamka Café">
-          <img src="images/logo%20hamka2.png" alt="Hamka Café">
-      </div>
-      <ul class="hamka-menu">
-          <li><a href="index.html" class="hamka-link ">INICIO</a></li>
-          <li><a href="nosotros.html" class="hamka-link">NOSOTROS</a></li>
-          <li><a href="venta.html" class="hamka-link active">VENTA</a></li>
-          <li><a href="alquiler.html" class="hamka-link">ALQUILER</a></li> 
-          <li><a href="coffee-export.html" class="hamka-link">COFFEE EXPORT</a></li>
-          <li><a href="contacto.html" class="hamka-link">CONTACTO</a></li>
-      </ul>
-  </div>
-</nav>
+        #pdfControls button:hover {
+            background-color: var(--secondary);
+        }
 
+        /* Image Overlay for Zoom */
+        .image-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1001;
+        }
 
+        .overlay-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90vh;
+        }
 
-   <div class="position_content" id="page_position_content">
-    <div class="browser_width mse_pre_init" id="u647"><!-- simple frame --></div>
-    <div class="clip_frame mse_pre_init" id="u648"><!-- image -->
-     <img class="block" id="u648_img" src="images/logo%20hamka.png" alt="" width="50" height="71"/>
-    </div>
-    <div class="clip_frame mse_pre_init" id="u650"><!-- image -->
-     <img class="block" id="u650_img" src="images/logo%20hamka2.png" alt="" width="152" height="81"/>
-    </div>
-    <a class="nonblock nontext clearfix mse_pre_init" id="u747-4" href="index.html"><!-- content --><p>INICIO</p></a>
-    <a class="nonblock nontext clearfix mse_pre_init" id="u748-4" href="nosotros.html"><!-- content --><p>NOSOTROS</p></a>
-    <div class="clearfix mse_pre_init" id="u749-4"><!-- content -->
-     <p>VENTA</p>
-    </div>
-    <a class="nonblock nontext clearfix mse_pre_init" id="u750-4" href="alquiler.html"><!-- content --><p>ALQUILER</p></a>
-    <a class="nonblock nontext clearfix mse_pre_init" id="u751-4" href="contacto.html"><!-- content --><p>CONTACTO</p></a>
-    <div class="museBGSize browser_width colelem" id="u702"><!-- column -->
-     <div class="clearfix" id="u702_align_to_page">
-      <div class="clearfix colelem" id="u877-11"><!-- content -->
-       <p id="u877-4"><span id="u877">​</span><span class="actAsInlineDiv normal_text" id="u5151"><!-- content --><span class="actAsDiv clip_frame excludeFromNormalFlow" id="u5152"><!-- image --><img id="u5152_img" src="images/icon%20tele1.png" alt="" width="19" height="19"/></span></span> | 950 272 331 | 971 855 211  | 01 5339193</p>
-       <p id="u877-9"><span id="u877-5">​</span><span class="actAsInlineDiv normal_text" id="u5226"><!-- content --><span class="actAsDiv clip_frame excludeFromNormalFlow" id="u5227"><!-- image --><img id="u5227_img" src="images/icono_men3.png" alt="" width="21" height="15"/></span></span><span id="u877-7">&nbsp;</span><span id="u877-8">informes@hamkacafe.com</span></p>
-      </div>
-      <img class="colelem" id="u766-4" src="images/u766-4.png" alt="VENTA" width="264" height="75"/><!-- rasterized frame -->
-     </div>
-    </div>
-    <div class="clearfix colelem" id="pu952-4"><!-- group -->
-     <div class="clearfix grpelem" id="u952-4"><!-- content -->
-      <p id="u952-2">LAS MEJORES MÁQUINAS DE CAFÉ DEL MERCADO</p>
-     </div>
-     <div class="clearfix grpelem" id="u953-4"><!-- content -->
-      <p>Equipos&nbsp; Italianos con los más altos estándares y Certificaciones de Calidad</p>
-     </div>
-    </div>
-    <div class="clearfix colelem" id="u773-6"><!-- content -->
-     <p>Cafeteras <span id="u773-2">Full Automáticas</span>&nbsp;con granos de café</p>
-     <div class="cafe-container">
-      <h2 class="cafe-section-heading">Venta de Equipos</h2>
-      
-      <!-- Philips Series 3000 -->
-      <div class="cafe-product-card">
-          <div class="cafe-product-gallery">
-              <div class="cafe-product-main-image">
-                  <img src="/img/Philip 3000 series/2.jpeg" alt="Philips Series 3000">
-              </div>
-              <div class="cafe-product-thumbnails">
-                  <div class="cafe-product-thumbnail active">
-                      <img src="/img/Philip 3000 series/2.jpeg" alt="Philips Series 3000 thumbnail 1">
-                  </div>
-                  <div class="cafe-product-thumbnail">
-                      <img src="/img/Philip 3000 series/3.jpeg" alt="Philips Series 3000 thumbnail 2">
-                  </div>
-                  <div class="cafe-product-thumbnail">
-                      <img src="/img/Philip 3000 series/4.jpeg" alt="Philips Series 3000 thumbnail 3">
-                  </div>
-                  <div class="cafe-product-thumbnail">
-                    <img src="/img/Philip 3000 series/5.jpeg" alt="Philips Series 3000 thumbnail 3">
+        .overlay-content img {
+            max-width: 100%;
+            max-height: 90vh;
+            border-radius: 5px;
+        }
+
+        .close-overlay {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .product-card {
+                flex-direction: column;
+            }
+            
+            .product-gallery, .product-details {
+                width: 100%;
+            }
+            
+            .product-main-image {
+                height: 250px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                flex-direction: column;
+                background-color: var(--light);
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+                padding: 20px 0;
+                gap: 0;
+            }
+            
+            .nav-menu.active {
+                left: 0;
+            }
+            
+            .nav-link {
+                display: block;
+                padding: 15px;
+                margin: 0;
+            }
+            
+            .mobile-toggle {
+                display: block;
+            }
+            
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .button-group {
+                flex-direction: column;
+            }
+            
+            .hero-contact {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .header {
+                height: auto;
+            }
+            
+            .nav-menu.active {
+                top: 1px; /* Ajustado para el header más alto */
+            }
+        }
+
+        @media (max-width: 576px) {
+            .product-main-image {
+                height: 200px;
+            }
+            
+            .product-title {
+                font-size: 1.5rem;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="images/logo%20hamka.png" alt="Hamka Café">
+                <img src="images/logo%20hamka2.png" alt="Hamka Café">
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">INICIO</a></li>
+                    <li><a href="nosotros.html" class="nav-link">NOSOTROS</a></li>
+                    <li><a href="venta.html" class="nav-link active">VENTA</a></li>
+                    <li><a href="alquiler.html" class="nav-link">ALQUILER</a></li>
+                    <li><a href="coffee-export.html" class="nav-link">COFFEE EXPORT</a></li>
+                    <li><a href="contacto.html" class="nav-link">CONTACTO</a></li>
+                </ul>
+                <div class="mobile-toggle">
+                    <i class="fas fa-bars"></i>
                 </div>
-              </div>
-          </div>
-          <div class="cafe-product-details">
-              <h3 class="cafe-product-title">Philips Series 3000              </h3>
-              <p class="cafe-product-description">Philips Series 3000 HD8829/01, una cafetera super
-                automática que trabaja con granos de café, tu
-                cappuccino favorito con un solo toque. Gracias a su
-                gran capacidad en un diseño compacto, podrá disfrutar
-                de espresso, café y capuchino recién hechos con solo
-                tocar un botón.
-                </p>
-              <p class="cafe-product-description">Disfrutar de un buen café, con granos recién molidos
-                como en las mejores cafeterías del país.
-                </p>
-              
-              <table class="cafe-specs-table">
-                  <tr>
-                      <td>Tipo de café</td>
-                      <td>En granos</td>
-                  </tr>
-                  <tr>
-                      <td>Contenedor de café</td>
-                      <td>250 Gr.</td>
-                  </tr>
-                  <tr>
-                      <td>Contenedor de agua</td>
-                      <td>1.7 Lt.</td>
-                  </tr>
-                  <tr>
-                      <td>Voltaje</td>
-                      <td>220v / 60 Hz</td>
-                  </tr>
-                  <tr>
-                      <td>Potencia</td>
-                      <td>1800 W</td>
-                  </tr>
-                  <tr>
-                      <td>Dimensiones (Largo x Profundidad x Altura)</td>
-                      <td>215 x 330 x 429 mm</td>
-                  </tr>
-              </table>
-              
-              <div class="cafe-button-group">
-                  <a href="#" class="cafe-action-button">Solicitar Cotización</a>
-           
-                  
+            </nav>
+        </div>
+    </header>
 
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1 class="hero-title">VENTA DE EQUIPOS</h1>
+            <p class="hero-subtitle">Equipos Italianos con los más altos estándares y Certificaciones de Calidad</p>
+        
+            <div class="hero-contact">
+                <div class="hero-contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>950 272 331</span>
+                </div>
+                <div class="hero-contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>971 855 211</span>
+                </div>
+                <div class="hero-contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>01 5339193</span>
+                </div>
+                <div class="hero-contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>informes@hamkacafe.com</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Main Content -->
+    <main class="container">
+        <h2 class="section-title">LAS MEJORES MÁQUINAS DE CAFÉ DEL MERCADO</h2>
+        <p class="section-subtitle">Cafeteras Full Automáticas con granos de café</p>
 
+        <!-- Products Section -->
+        <section class="products">
+            <!-- Philips Series 3000 -->
+            <div class="product-card">
+                <div class="product-gallery">
+                    <div class="product-main-image">
+                        <img src="/img/Philip 3000 series/2.jpeg" alt="Philips Series 3000">
+                    </div>
+                    <div class="product-thumbnails">
+                        <div class="product-thumbnail active">
+                            <img src="/img/Philip 3000 series/2.jpeg" alt="Philips Series 3000 thumbnail 1">
+                        </div>
+                        <div class="product-thumbnail">
+                            <img src="/img/Philip 3000 series/3.jpeg" alt="Philips Series 3000 thumbnail 2">
+                        </div>
+                        <div class="product-thumbnail">
+                            <img src="/img/Philip 3000 series/4.jpeg" alt="Philips Series 3000 thumbnail 3">
+                        </div>
+                        <div class="product-thumbnail">
+                            <img src="/img/Philip 3000 series/5.jpeg" alt="Philips Series 3000 thumbnail 4">
+                        </div>
+                    </div>
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">Philips Series 3000</h3>
+                    <p class="product-description">
+                        Philips Series 3000 HD8829/01, una cafetera super automática que trabaja con granos de café, tu cappuccino favorito con un solo toque. Gracias a su gran capacidad en un diseño compacto, podrá disfrutar de espresso, café y capuchino recién hechos con solo tocar un botón.
+                    </p>
+                    <p class="product-description">
+                        Disfrutar de un buen café, con granos recién molidos como en las mejores cafeterías del país.
+                    </p>
+                    
+                    <table class="specs-table">
+                        <tr>
+                            <td>Tipo de café</td>
+                            <td>En granos</td>
+                        </tr>
+                        <tr>
+                            <td>Contenedor de café</td>
+                            <td>250 Gr.</td>
+                        </tr>
+                        <tr>
+                            <td>Contenedor de agua</td>
+                            <td>1.7 Lt.</td>
+                        </tr>
+                        <tr>
+                            <td>Voltaje</td>
+                            <td>220v / 60 Hz</td>
+                        </tr>
+                        <tr>
+                            <td>Potencia</td>
+                            <td>1800 W</td>
+                        </tr>
+                        <tr>
+                            <td>Dimensiones (Largo x Profundidad x Altura)</td>
+                            <td>215 x 330 x 429 mm</td>
+                        </tr>
+                    </table>
+                    
+                    <div class="button-group">
+                        <a href="#" class="btn quote-btn" data-product="Philips Series 3000">Solicitar Cotización</a>
+                        <a href="#" class="btn btn-alt pdf-btn" data-pdfs='["./img/Philip 3000 series/ROYAL- DATACONT.pdf", "./img/Philip 3000 series/Especificaciones tecnicas.pdf"]'>Ver Ficha</a>
+                    </div>
+                </div>
+            </div>
 
-                  <!-- Botón para abrir el visor de PDFs -->
-<a href="#" class="cafe-action-button cafe-action-button-alt" 
-onclick="openPdfViewer(['./img/Philip 3000 series/ROYAL- DATACONT.pdf', './img/Philip 3000 series/Especificaciones tecnicas.pdf'])">
-Ver Ficha
-</a>
+            <!-- SAECO Lirika OTC -->
+            <div class="product-card">
+                <div class="product-gallery">
+                    <div class="product-main-image">
+                        <img src="/img/Saeco Lirika OTC/2.webp" alt="SAECO Lirika OTC">
+                    </div>
+                    <div class="product-thumbnails">
+                        <div class="product-thumbnail active">
+                            <img src="/img/Saeco Lirika OTC/2.jpg" alt="SAECO Lirika OTC thumbnail 1">
+                        </div>
+                        <div class="product-thumbnail">
+                            <img src="/img/Saeco Lirika OTC/3.jpg" alt="SAECO Lirika OTC thumbnail 2">
+                        </div>
+                        <div class="product-thumbnail">
+                            <img src="/img/Saeco Lirika OTC/4.jpg" alt="SAECO Lirika OTC thumbnail 3">
+                        </div>
+                    </div>
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">SAECO Lirika OTC</h3>
+                    <p class="product-description">
+                        Lirika OTC una cafetera super automática que trabaja con granos de café, tu cappuccino favorito con un solo toque. Gracias a su gran capacidad en un diseño compacto, podrá disfrutar de espresso, café y capuchino recién hechos con solo tocar un botón.
+                    </p>
+                    <p class="product-description">
+                        Cuenta con tecnología One Touch Cappuccino. Disfrutar de un buen café, con granos recién molidos como en las mejores cafeterías del país.
+                    </p>
+                    
+                    <table class="specs-table">
+                        <tr>
+                            <td>Contenedor de café</td>
+                            <td>500 Gr.</td>
+                        </tr>
+                        <tr>
+                            <td>Contenedor de agua</td>
+                            <td>2.5 Lt.</td>
+                        </tr>
+                        <tr>
+                            <td>Voltaje</td>
+                            <td>220v / 60 Hz</td>
+                        </tr>
+                        <tr>
+                            <td>Potencia</td>
+                            <td>1800 W</td>
+                        </tr>
+                        <tr>
+                            <td>Dimensiones (Largo x Profundidad x Altura)</td>
+                            <td>215 x 370 x 429 mm</td>
+                        </tr>
+                    </table>
+                    
+                    <div class="button-group">
+                        <a href="#" class="btn quote-btn" data-product="SAECO Lirika OTC">Solicitar Cotización</a>
+                        <a href="#" class="btn btn-alt pdf-btn" data-pdfs='["./img/Saeco Lirika OTC/OTC.pdf"]'>Ver Ficha</a>
+                    </div>
+                </div>
+            </div>
 
-<!-- Modal para la previsualización de PDFs -->
-<div id="pdfModal" class="modal">
- <div class="modal-content">
-     <span class="close" onclick="closePdfViewer()">&times;</span>
-     <iframe id="pdfViewer"></iframe>
-     <div id="pdfControls"></div> <!-- Miniaturas de PDFs -->
- </div>
-</div>
+            <!-- SAECO ROYAL BLACK -->
+            <div class="product-card">
+                <div class="product-gallery">
+                    <div class="product-main-image">
+                        <img src="/img/Saeco Royal Black/1.jpg" alt="SAECO ROYAL BLACK">
+                    </div>
+                    <div class="product-thumbnails">
+                        <div class="product-thumbnail active">
+                            <img src="/img/Saeco Royal Black/1.jpg" alt="SAECO ROYAL BLACK thumbnail 1">
+                        </div>
+                        <div class="product-thumbnail">
+                            <img src="/img/Saeco Royal Black/2.jpg" alt="SAECO ROYAL BLACK thumbnail 2">
+                        </div>
+                        <div class="product-thumbnail">
+                            <img src="/img/Saeco Royal Black/Portada.jpg" alt="SAECO ROYAL BLACK thumbnail 3">
+                        </div>
+                    </div>
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">SAECO ROYAL BLACK</h3>
+                    <p class="product-description">
+                        ROYAL BLACK, cafetera super automática, especializada en tipos de café. Perfecta, para los amantes del buen café.
+                    </p>
+                    <p class="product-description">
+                        Disfrutar de un buen café, con granos recién molidos como en las mejores cafeterías del país.
+                    </p>
+                    
+                    <table class="specs-table">
+                        <tr>
+                            <td>Contenedor de café</td>
+                            <td>600 Gr.</td>
+                        </tr>
+                        <tr>
+                            <td>Contenedor de agua</td>
+                            <td>2.5 Lt.</td>
+                        </tr>
+                        <tr>
+                            <td>Voltaje</td>
+                            <td>220v / 60 Hz</td>
+                        </tr>
+                        <tr>
+                            <td>Potencia</td>
+                            <td>1800 W</td>
+                        </tr>
+                        <tr>
+                            <td>Dimensiones (Largo x Profundidad x Altura)</td>
+                            <td>280 x 398 x 450 mm</td>
+                        </tr>
+                    </table>
+                    
+                    <div class="button-group">
+                        <a href="#" class="btn quote-btn" data-product="SAECO ROYAL BLACK">Solicitar Cotización</a>
+                        <a href="#" class="btn btn-alt pdf-btn" data-pdfs='["./img/Saeco Royal Black/ROYAL- HAMKA.pdf"]'>Ver Ficha</a>
+                    </div>
+                </div>
+            </div>
 
-<!-- Estilos del modal -->
-<style>
-/* Fondo del modal */
-.modal {
- display: none; 
- position: fixed; 
- top: 50%;
- left: 50%;
- transform: translate(-50%, -50%);
- width: 90%;
- max-width: 600px;
- height: 80vh;
- background: rgba(0, 0, 0, 0.8);
- border-radius: 10px;
- box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
- z-index: 1000;
-}
+            <!-- SAECO ROYAL PLUS -->
+            <div class="product-card">
+                <div class="product-gallery">
+                    <div class="product-main-image">
+                        <img src="/img/Saeco Royal plus/0.jpg" alt="SAECO ROYAL PLUS">
+                    </div>
+                    <div class="product-thumbnails">
+                        <div class="product-thumbnail active">
+                            <img src="/img/Saeco Royal plus/0.jpg" alt="SAECO ROYAL PLUS thumbnail 1">
+                        </div>
+                        <div class="product-thumbnail">
+                            <img src="/img/Saeco Royal plus/1.jpg" alt="SAECO ROYAL PLUS thumbnail 2">
+                        </div>
+                        <div class="product-thumbnail">
+                            <img src="/img/Saeco Royal plus/2.jpg" alt="SAECO ROYAL PLUS thumbnail 3">
+                        </div>
+                        <div class="product-thumbnail">
+                            <img src="/img/Saeco Royal plus/3.jpg" alt="SAECO ROYAL PLUS thumbnail 4">
+                        </div>
+                    </div>
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">SAECO ROYAL PLUS</h3>
+                    <p class="product-description">
+                        ROYAL BLACK, Con tu cafetera super automática, disfrutarás de unos cafés deliciosos: suaves, finos, intensos; elige la opción que quieras desde el panel de control y deléitate con todos tus sentidos.
+                    </p>
+                    <p class="product-description">
+                        Disfrutar de un buen café, con granos recién molidos como en las mejores cafeterías del país.
+                    </p>
+                    
+                    <table class="specs-table">
+                        <tr>
+                            <td>Contenedor de café</td>
+                            <td>600 Gr.</td>
+                        </tr>
+                        <tr>
+                            <td>Contenedor de agua</td>
+                            <td>2.5 Lt.</td>
+                        </tr>
+                        <tr>
+                            <td>Voltaje</td>
+                            <td>220v / 60 Hz</td>
+                        </tr>
+                        <tr>
+                            <td>Potencia</td>
+                            <td>1800 W</td>
+                        </tr>
+                        <tr>
+                            <td>Dimensiones (Largo x Profundidad x Altura)</td>
+                            <td>280 x 398 x 450 mm</td>
+                        </tr>
+                    </table>
+                    
+                    <div class="button-group">
+                        <a href="#" class="btn quote-btn" data-product="SAECO ROYAL PLUS">Solicitar Cotización</a>
+                        <a href="#" class="btn btn-alt pdf-btn" data-pdfs='["./img/Saeco Royal plus/ROYAL- HAMKA.pdf"]'>Ver Ficha</a>
+                    </div>
+                </div>
+            </div>
 
-/* Contenido del modal */
-.modal-content {
- background: #fff;
- width: 100%;
- height: 100%;
- display: flex;
- flex-direction: column;
- align-items: center;
- padding: 15px;
- border-radius: 10px;
- position: relative;
-}
+            <!-- SAECO ROYAL OTC -->
+            <div class="product-card">
+                <div class="product-gallery">
+                    <div class="product-main-image">
+                        <img src="/img/Saeco Royal OTC/1.jpg" alt="SAECO ROYAL OTC">
+                    </div>
+                    <div class="product-thumbnails">
+                        <div class="product-thumbnail active">
+                            <img src="/img/Saeco Royal OTC/1.jpg" alt="SAECO ROYAL OTC thumbnail 1">
+                        </div>
+                        <div class="product-thumbnail">
+                            <img src="/img/Saeco Royal OTC/2.jpg" alt="SAECO ROYAL OTC thumbnail 2">
+                        </div>
+                        <div class="product-thumbnail">
+                            <img src="/img/Saeco Royal OTC/3.jpg" alt="SAECO ROYAL OTC thumbnail 3">
+                        </div>
+                        <div class="product-thumbnail">
+                            <img src="/img/Saeco Royal OTC/4.jpg" alt="SAECO ROYAL OTC thumbnail 4">
+                        </div>
+                    </div>
+                </div>
+                <div class="product-details">
+                    <h3 class="product-title">SAECO ROYAL OTC</h3>
+                    <p class="product-description">
+                        ROYAL BLACK OTC, Con tu cafetera super automática con toda la tecnología italiana en tus manos. Tener un espresso, ristretto, americano, cappuccino o latte con solo presionar un botón.
+                    </p>
+                    <p class="product-description">
+                        Disfrutar de un buen café, con granos recién molidos como en las mejores cafeterías del país.
+                    </p>
+                    
+                    <table class="specs-table">
+                        <tr>
+                            <td>Contenedor de café</td>
+                            <td>600 Gr.</td>
+                        </tr>
+                        <tr>
+                            <td>Contenedor de agua</td>
+                            <td>2.5 Lt.</td>
+                        </tr>
+                        <tr>
+                            <td>Voltaje</td>
+                            <td>220v / 60 Hz</td>
+                        </tr>
+                        <tr>
+                            <td>Potencia</td>
+                            <td>1800 W</td>
+                        </tr>
+                        <tr>
+                            <td>Dimensiones (Largo x Profundidad x Altura)</td>
+                            <td>280 x 398 x 450 mm</td>
+                        </tr>
+                    </table>
+                    
+                    <div class="button-group">
+                        <a href="#" class="btn quote-btn" data-product="SAECO ROYAL OTC">Solicitar Cotización</a>
+                        <a href="#" class="btn btn-alt pdf-btn" data-pdfs='["./img/Saeco Royal OTC/ROYAL- HAMKA.pdf"]'>Ver Ficha</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-/* Botón de cierre */
-.close {
- 
- position: absolute;
- top: 5px;
- right: 5px;
- font-size: 24px;
- font-weight: bold;
- cursor: pointer;
- color: #ffffff;
-    background: red;
-    border-radius: 50%;
-    padding: 6px;
-}
+        <!-- Info Card -->
+        <div class="info-card">
+            <h3 class="info-card-title">Sobre el Café Peruano</h3>
+            <p>Perú es el segundo mayor exportador de café orgánico del mundo, después de México. Perú tiene 425,416 hectáreas dedicadas al cultivo de café, lo que representa el 6% del área agrícola nacional. El potencial de crecimiento del café en el país es de aproximadamente 2 millones de hectáreas. Las plantaciones de café están ubicadas en 17 regiones, 67 provincias y 338 distritos.</p>
+            <p>La rica variedad de climas, costa, andina y selva, contribuyen a una excelente cantidad de café con calidad de exportación. Tenemos una gran variedad de café para ofrecer.</p>
+        </div>
+    </main>
 
-/* Visor PDF */
-#pdfViewer {
- width: 100%;
- height: 90%;
- border: none;
-}
-
-/* Controles de PDF (miniaturas o botones) */
-#pdfControls {
- display: flex;
- justify-content: center;
- gap: 10px;
- margin-top: 5px;
-}
-
-#pdfControls button {
- background: #333;
- color: white;
- border: none;
- padding: 5px 10px;
- cursor: pointer;
- border-radius: 5px;
- font-size: 14px;
-}
-
-#pdfControls button:hover {
- background: #555;
-}
-</style>
-
-<!-- JavaScript para manejar el modal -->
-<script>
-function openPdfViewer(pdfFiles) {
- const modal = document.getElementById("pdfModal");
- const viewer = document.getElementById("pdfViewer");
- const controls = document.getElementById("pdfControls");
-
- if (pdfFiles.length === 0) return;
-
- // Cargar el primer PDF por defecto
- viewer.src = pdfFiles[0];
-
- // Limpiar controles anteriores
- controls.innerHTML = "";
-
- // Si hay más de un PDF, crear botones para cambiar de documento
- if (pdfFiles.length > 1) {
-     pdfFiles.forEach((pdf, index) => {
-         let btn = document.createElement("button");
-         btn.textContent = "PDF " + (index + 1);
-         btn.onclick = () => viewer.src = pdf;
-         controls.appendChild(btn);
-     });
- }
-
- // Mostrar el modal
- modal.style.display = "block";
-}
-
-function closePdfViewer() {
- document.getElementById("pdfModal").style.display = "none";
-}
-</script>
-
-
-
-
-
-
-
-              </div>
-          </div>
-      </div>
-      
-      <!-- SAECO Lirika OTC -->
-      <div class="cafe-product-card">
-          <div class="cafe-product-gallery">
-              <div class="cafe-product-main-image">
-                  <img src="/img/Saeco Lirika OTC/2.webp" alt="SAECO Lirika OTC">
-              </div>
-              <div class="cafe-product-thumbnails">
-                  <div class="cafe-product-thumbnail active">
-                      <img src="/img/Saeco Lirika OTC/2.jpg" alt="SAECO Lirika OTC thumbnail 1">
-                  </div>
-                  <div class="cafe-product-thumbnail">
-                      <img src="/img/Saeco Lirika OTC/3.jpg" alt="SAECO Lirika OTC thumbnail 2">
-                  </div>
-                  <div class="cafe-product-thumbnail">
-                      <img src="/img/Saeco Lirika OTC/4.jpg" alt="SAECO Lirika OTC thumbnail 3">
-                  </div>
-              </div>
-          </div>
-          <div class="cafe-product-details">
-              <h3 class="cafe-product-title">SAECO Lirika OTC</h3>
-              <p class="cafe-product-description">Lirika OTC una cafetera super automática que trabaja con granos de café, tu cappuccino favorito con un solo toque. Gracias a su gran capacidad en un diseño compacto, podrá disfrutar de espresso, café y capuchino recién hechos con solo tocar un botón.</p>
-              <p class="cafe-product-description">Cuenta con tecnología One Touch Cappuccino. Disfrutar de un buen café, con granos recién molidos como en las mejores cafeterías del país.</p>
-              
-              <table class="cafe-specs-table">
-                  <tr>
-                      <td>Contenedor de café</td>
-                      <td>500 Gr.</td>
-                  </tr>
-                  <tr>
-                      <td>Contenedor de agua</td>
-                      <td>2.5 Lt.</td>
-                  </tr>
-                  <tr>
-                      <td>Voltaje</td>
-                      <td>220v / 60 Hz</td>
-                  </tr>
-                  <tr>
-                      <td>Potencia</td>
-                      <td>1800 W</td>
-                  </tr>
-                  <tr>
-                      <td>Dimensiones (Largo x Profundidad x Altura)</td>
-                      <td>215 x 370 x 429 mm</td>
-                  </tr>
-              </table>
-              
-              <div class="cafe-button-group">
-                  <a href="#" class="cafe-action-button">Solicitar Cotización</a>
-                  <a href="#" class="cafe-action-button cafe-action-button-alt" 
-                  onclick="openPdfViewer(['./img/Saeco Lirika OTC/OTC.pdf'])">
-                  Ver Ficha
-                  </a>
-              </div>
-          </div>
-      </div>
-      
-      <!-- SAECO ROYAL BLACK -->
-      <div class="cafe-product-card">
-          <div class="cafe-product-gallery">
-              <div class="cafe-product-main-image">
-                  <img src="/img/Saeco Royal Black/1.jpg" alt="SAECO ROYAL BLACK">
-              </div>
-              <div class="cafe-product-thumbnails">
-                  <div class="cafe-product-thumbnail active">
-                      <img src="/img/Saeco Royal Black/2.jpg" alt="SAECO ROYAL BLACK thumbnail 1">
-                  </div>
-                  <div class="cafe-product-thumbnail">
-                      <img src="/img/Saeco Royal Black/Portada.jpg" alt="SAECO ROYAL BLACK thumbnail 2">
-                  </div>
-                 
-              </div>
-          </div>
-          <div class="cafe-product-details">
-              <h3 class="cafe-product-title">SAECO ROYAL BLACK</h3>
-              <p class="cafe-product-description">ROYAL BLACK, cafetera super automática, especializada en tipos de café. Perfecta, para los amantes del buen café.</p>
-              <p class="cafe-product-description">Disfrutar de un buen café, con granos recién molidos como en las mejores cafeterías del país.</p>
-              
-              <table class="cafe-specs-table">
-                  <tr>
-                      <td>Contenedor de café</td>
-                      <td>600 Gr.</td>
-                  </tr>
-                  <tr>
-                      <td>Contenedor de agua</td>
-                      <td>2.5 Lt.</td>
-                  </tr>
-                  <tr>
-                      <td>Voltaje</td>
-                      <td>220v / 60 Hz</td>
-                  </tr>
-                  <tr>
-                      <td>Potencia</td>
-                      <td>1800 W</td>
-                  </tr>
-                  <tr>
-                      <td>Dimensiones (Largo x Profundidad x Altura)</td>
-                      <td>280 x 398 x 450 mm</td>
-                  </tr>
-              </table>
-              
-              <div class="cafe-button-group">
-                  <a href="#" class="cafe-action-button">Solicitar Cotización</a>
-                  <div class="cafe-button-group">
-                     
-                    <a href="#" class="cafe-action-button cafe-action-button-alt" 
-                    onclick="openPdfViewer(['./img/Saeco Royal Black/ROYAL- HAMKA.pdf'])">
-                    Ver Ficha
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <img src="images/logo2%20blan.png" alt="Hamka Café">
+                </div>
+                <div class="footer-contact">
+                    <div class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Calle 16 Mz. M lote 18 Urb. Alameda de Ate 2da etapa - Santa Anita - Lima</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>informes@hamkacafe.com</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>950 272 331</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>971 855 211</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>01 5339193</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h3>Enlaces Rápidos</h3>
+                <a href="index.html" class="footer-link">Inicio</a>
+                <a href="nosotros.html" class="footer-link">Nosotros</a>
+                <a href="venta.html" class="footer-link">Venta</a>
+                <a href="alquiler.html" class="footer-link">Alquiler</a>
+                <a href="coffee-export.html" class="footer-link">Coffee Export</a>
+                <a href="contacto.html" class="footer-link">Contacto</a>
+                
+                <div class="social-links">
+                    <a href="https://www.facebook.com/HAMKA-246234232400463/?ref=br_rs" target="_blank" class="social-link">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-whatsapp"></i>
                     </a>
                 </div>
-              </div>
-          </div>
-      </div>
-      
-      <!-- SAECO ROYAL PLUS -->
-      <div class="cafe-product-card">
-          <div class="cafe-product-gallery">
-              <div class="cafe-product-main-image">
-                  <img src="/img/Saeco Royal plus/0.jpg" alt="SAECO ROYAL PLUS">
-              </div>
-              <div class="cafe-product-thumbnails">
-                  <div class="cafe-product-thumbnail active">
-                      <img src="/img/Saeco Royal plus/1.jpg" alt="SAECO ROYAL PLUS thumbnail 1">
-                  </div>
-                  <div class="cafe-product-thumbnail">
-                      <img src="/img/Saeco Royal plus/2.jpg" alt="SAECO ROYAL PLUS thumbnail 2">
-                  </div>
-                  <div class="cafe-product-thumbnail">
-                      <img src="/img/Saeco Royal plus/3.jpg" alt="SAECO ROYAL PLUS thumbnail 3">
-                  </div>
-                  <div class="cafe-product-thumbnail">
-                    <img src="/img/Saeco Royal plus/4.jpg" alt="SAECO ROYAL PLUS thumbnail 3">
-                </div>
-              </div>
-          </div>
-          <div class="cafe-product-details">
-              <h3 class="cafe-product-title">SAECO ROYAL PLUS</h3>
-              <p class="cafe-product-description">ROYAL BLACK, Con tu cafetera super automática, disfrutarás de unos cafés deliciosos: suaves, finos, intensos; elige la opción que quieras desde el panel de control y deléitate con todos tus sentidos.</p>
-              <p class="cafe-product-description">Disfrutar de un buen café, con granos recién molidos como en las mejores cafeterías del país.</p>
-              
-              <table class="cafe-specs-table">
-                  <tr>
-                      <td>Contenedor de café</td>
-                      <td>600 Gr.</td>
-                  </tr>
-                  <tr>
-                      <td>Contenedor de agua</td>
-                      <td>2.5 Lt.</td>
-                  </tr>
-                  <tr>
-                      <td>Voltaje</td>
-                      <td>220v / 60 Hz</td>
-                  </tr>
-                  <tr>
-                      <td>Potencia</td>
-                      <td>1800 W</td>
-                  </tr>
-                  <tr>
-                      <td>Dimensiones (Largo x Profundidad x Altura)</td>
-                      <td>280 x 398 x 450 mm</td>
-                  </tr>
-              </table>
-              
-              <div class="cafe-button-group">
-                  <a href="#" class="cafe-action-button">Solicitar Cotización</a>
-                  <a href="#" class="cafe-action-button cafe-action-button-alt" 
-                  onclick="openPdfViewer(['./img/Saeco Royal plus/ROYAL- HAMKA.pdf'])">
-                  Ver Ficha
-                  </a>
-              </div>
-          </div>
-      </div>
-      
-      <!-- SAECO ROYAL OTC -->
-      <div class="cafe-product-card">
-          <div class="cafe-product-gallery">
-              <div class="cafe-product-main-image">
-                  <img src="/img/Saeco Royal OTC/1.jpg" alt="SAECO ROYAL OTC">
-              </div>
-              <div class="cafe-product-thumbnails">
-                  <div class="cafe-product-thumbnail active">
-                      <img src="/img/Saeco Royal OTC/2.jpg" alt="SAECO ROYAL OTC thumbnail 1">
-                  </div>
-                  <div class="cafe-product-thumbnail">
-                      <img src="/img/Saeco Royal OTC/3.jpg" alt="SAECO ROYAL OTC thumbnail 2">
-                  </div>
-                  <div class="cafe-product-thumbnail">
-                      <img src="/img/Saeco Royal OTC/4.jpg" alt="SAECO ROYAL OTC thumbnail 3">
-                  </div>
-                  <div class="cafe-product-thumbnail">
-                    <img src="/img/Saeco Royal OTC/5.jpg" alt="SAECO ROYAL OTC thumbnail 3">
-                </div>
-              </div>
-          </div>
-          <div class="cafe-product-details">
-              <h3 class="cafe-product-title">SAECO ROYAL OTC</h3>
-              <p class="cafe-product-description">ROYAL BLACK OTC, Con tu cafetera super automática con toda la tecnología italiana en tus manos. Tener un espresso, ristretto, americano, cappuccino o latte con solo presionar un botón.</p>
-              <p class="cafe-product-description">Disfrutar de un buen café, con granos recién molidos como en las mejores cafeterías del país.</p>
-              
-              <table class="cafe-specs-table">
-                  <tr>
-                      <td>Contenedor de café</td>
-                      <td>600 Gr.</td>
-                  </tr>
-                  <tr>
-                      <td>Contenedor de agua</td>
-                      <td>2.5 Lt.</td>
-                  </tr>
-                  <tr>
-                      <td>Voltaje</td>
-                      <td>220v / 60 Hz</td>
-                  </tr>
-                  <tr>
-                      <td>Potencia</td>
-                      <td>1800 W</td>
-                  </tr>
-                  <tr>
-                      <td>Dimensiones (Largo x Profundidad x Altura)</td>
-                      <td>280 x 398 x 450 mm</td>
-                  </tr>
-              </table>
-              
-              <div class="cafe-button-group">
-                  <a href="#" class="cafe-action-button">Solicitar Cotización</a>
-                  <a href="#" class="cafe-action-button cafe-action-button-alt" 
-                  onclick="openPdfViewer(['./img/Saeco Royal OTC/ROYAL- HAMKA.pdf'])">
-                  Ver Ficha
-                  </a>
-              </div>
-          </div>
-      </div>
-      
-      <!-- SAECO PICO BARISTO 
-      <div class="cafe-product-card">
-          <div class="cafe-product-gallery">
-              <div class="cafe-product-main-image">
-                  <img src="/img/1.jpeg" alt="SAECO PICO BARISTO">
-              </div>
-              <div class="cafe-product-thumbnails">
-                  <div class="cafe-product-thumbnail active">
-                      <img src="/api/placeholder/80/80" alt="SAECO PICO BARISTO thumbnail 1">
-                  </div>
-                  <div class="cafe-product-thumbnail">
-                      <img src="/api/placeholder/80/80" alt="SAECO PICO BARISTO thumbnail 2">
-                  </div>
-                  <div class="cafe-product-thumbnail">
-                      <img src="/api/placeholder/80/80" alt="SAECO PICO BARISTO thumbnail 3">
-                  </div>
-              </div>
-          </div>
-          <div class="cafe-product-details">
-              <h3 class="cafe-product-title">SAECO PICO BARISTO</h3>
-              <p class="cafe-product-description">SAECO PICO BARISTO, una cafetera super automática que te acerca a la experiencia profesional del café.</p>
-              
-              <table class="cafe-specs-table">
-                  <tr>
-                      <td>Tipo de café Admitido</td>
-                      <td>En granos</td>
-                  </tr>
-                  <tr>
-                      <td>Cap. Bandeja de café</td>
-                      <td>200 gr.</td>
-                  </tr>
-                  <tr>
-                      <td>Cap. Bandeja de Agua</td>
-                      <td>1.8 L</td>
-                  </tr>
-                  <tr>
-                      <td>Presión de la bomba</td>
-                      <td>15 bar (Café y Leche)</td>
-                  </tr>
-                  <tr>
-                      <td>Caldera</td>
-                      <td>Monocircuito</td>
-                  </tr>
-                  <tr>
-                      <td>Bandeja de goteo</td>
-                      <td>Rejilla de acero</td>
-                  </tr>
-                  <tr>
-                      <td>Voltaje</td>
-                      <td>220V</td>
-                  </tr>
-                  <tr>
-                      <td>Frecuencia</td>
-                      <td>60 Hz</td>
-                  </tr>
-                  <tr>
-                      <td>Alimentación</td>
-                      <td>1850 w (10A)</td>
-                  </tr>
-                  <tr>
-                      <td>Dimensiones</td>
-                      <td>22 x 34 x 43 cm</td>
-                  </tr>
-                  <tr>
-                      <td>Material de Estructura</td>
-                      <td>ABS Plástico</td>
-                  </tr>
-                  <tr>
-                      <td>Manual e instructivos</td>
-                      <td>Sí</td>
-                  </tr>
-                  <tr>
-                      <td>One Touch</td>
-                      <td>Sí</td>
-                  </tr>
-                  <tr>
-                      <td>Pantalla led</td>
-                      <td>Sí</td>
-                  </tr>
-                  <tr>
-                      <td>País de Origen</td>
-                      <td>Italy (Producto importado)</td>
-                  </tr>
-              </table>
-              
-              <div class="cafe-button-group">
-                  <a href="#" class="cafe-action-button">Solicitar Cotización</a>
-                  <a href="#" class="cafe-action-button cafe-action-button-alt">Descargar Ficha</a>
-              </div>
-          </div>
-      </div>-->
-      
-      <div class="cafe-info-card">
-          <h3 class="cafe-info-card-title">Sobre el Café Peruano</h3>
-          <p>Perú es el segundo mayor exportador de café orgánico del mundo, después de México. Perú tiene 425,416 hectáreas dedicadas al cultivo de café, lo que representa el 6% del área agrícola nacional. El potencial de crecimiento del café en el país es de aproximadamente 2 millones de hectáreas. Las plantaciones de café están ubicadas en 17 regiones, 67 provincias y 338 distritos.</p>
-          <p>La rica variedad de climas, costa, andina y selva, contribuyen a una excelente cantidad de café con calidad de exportación. Tenemos una gran variedad de café para ofrecer.</p>
-      </div>
-  </div>
-    </div>
-    <div class="clearfix colelem" id="pslideshowu4360"><!-- group -->
-     <div class="SlideShowWidget clearfix widget_invisible grpelem" id="slideshowu4360"><!-- none box -->
-      <div class="popup_anchor" id="u4361popup">
-       <div class="SlideShowContentPanel rgba-background clearfix" id="u4361"><!-- stack box -->
-        <div class="SSSlide clip_frame grpelem" id="u4372"><!-- image -->
-         <img class="block ImageInclude" id="u4372_img" data-src="images/minuto1.jpg" src="images/blank.gif" alt="" data-width="500" data-height="500"/>
-        </div>
-        <div class="SSSlide invi clip_frame grpelem" id="u5422"><!-- image -->
-         <img class="block ImageInclude" id="u5422_img" data-src="images/minuto2.jpg" src="images/blank.gif" alt="" data-width="500" data-height="500"/>
-        </div>
-        <div class="SSSlide invi clip_frame grpelem" id="u5431"><!-- image -->
-         <img class="block ImageInclude" id="u5431_img" data-src="images/minuto3.jpg" src="images/blank.gif" alt="" data-width="500" data-height="500"/>
-        </div>
-        <div class="SSSlide invi clip_frame grpelem" id="u5440"><!-- image -->
-         <img class="block ImageInclude" id="u5440_img" data-src="images/minuto4.jpg" src="images/blank.gif" alt="" data-width="500" data-height="500"/>
-        </div>
-        <div class="SSSlide invi clip_frame grpelem" id="u5449"><!-- image -->
-         <img class="block ImageInclude" id="u5449_img" data-src="images/minuto5.jpg" src="images/blank.gif" alt="" data-width="500" data-height="500"/>
-        </div>
-        <div class="SSSlide invi clip_frame grpelem" id="u5458"><!-- image -->
-         <img class="block ImageInclude" id="u5458_img" data-src="images/minuto6.jpg" src="images/blank.gif" alt="" data-width="500" data-height="500"/>
-        </div>
-       </div>
-      </div>
-      <div class="popup_anchor" id="u4378popup">
-       <div class="SSSlideLinks clearfix" id="u4378"><!-- horizontal-rows box -->
-     
-       
-        <div class="SSSlideLink clip_frame grpelem"  ><!-- image -->
-          
-         </div>
-        <div class="SSSlideLink clip_frame grpelem" ><!-- image -->
-         </div>
-        <div class="SSSlideLink clip_frame grpelem" ><!-- image -->
-         </div>
-        <div class="SSSlideLink clip_frame grpelem"  ><!-- image -->
-         </div>
-       </div>
-      </div>
-      <div class="popup_anchor">
-       <div class="SSCloseButton popup_element clearfix" id="u4399"><!-- group -->
-        <div class="clearfix grpelem" id="u4400-4"><!-- content -->
-         <p>x</p>
-        </div>
-       </div>
-      </div>
-      <div class="popup_anchor" id="u4375-4popup">
-       <div class="SlideShowLabel SSSlideCount clearfix" id="u4375-4"><!-- content -->
-        <p>6 &#45; 6</p>
-       </div>
-      </div>
-      <div class="popup_anchor" id="u4374-4popup">
-       <div class="SSPreviousButton clearfix" id="u4374-4"><!-- content -->
-        <p>&lt;</p>
-       </div>
-      </div>
-      <div class="popup_anchor" id="u4398-4popup">
-       <div class="SSNextButton clearfix" id="u4398-4"><!-- content -->
-        <p>&gt;</p>
-       </div>
-      </div>
-     </div>
-     <div class="clearfix grpelem" id="u3538-6"><!-- content -->
-      <p>Pulse una tecla y obtenga en segundos, 1 o 2 tazas de auténtico café espresso, americano y cappuccino con la espuma, y fino aroma con granos recién molidos, como en las mejores cafeterías.</p>
-      <p>Muele al instante los granos de café, y dosifica automáticamente la cantidad necesaria. Ya no necesita ser un Barista, para lograr el mejor café.</p>
-     </div>
-    </div>
-     
-  
-     
-     
-    </div>
-    <div class="clearfix colelem" id="ppslideshowu4198"><!-- group -->
-     <div class="clearfix grpelem" id="pslideshowu4198"><!-- column -->
-      <div class="SlideShowWidget clearfix widget_invisible colelem" id="slideshowu4198"><!-- none box -->
-       <div class="popup_anchor" id="u4204popup">
-        <div class="SlideShowContentPanel rgba-background clearfix" id="u4204"><!-- stack box -->
-         <div class="SSSlide clip_frame grpelem" id="u4213"><!-- image -->
-          <img class="block ImageInclude" id="u4213_img" data-src="images/pico-baristo1.jpg" src="images/blank.gif" alt="" data-width="500" data-height="500"/>
-         </div>
-         <div class="SSSlide invi clip_frame grpelem" id="u5634"><!-- image -->
-          <img class="block ImageInclude" id="u5634_img" data-src="images/pico-baristo2.jpg" src="images/blank.gif" alt="" data-width="500" data-height="500"/>
-         </div>
-         <div class="SSSlide invi clip_frame grpelem" id="u5643"><!-- image -->
-          <img class="block ImageInclude" id="u5643_img" data-src="images/pico-baristo3.jpg" src="images/blank.gif" alt="" data-width="500" data-height="500"/>
-         </div>
-        </div>
-       </div>
-       <div class="popup_anchor" id="u4241popup">
-        <div class="SSSlideLinks clearfix" id="u4241"><!-- horizontal-rows box -->
-     
-         
-         <div class="SSSlideLink    " ><!-- image -->
-          </div>
-        </div>
-       </div>
-       <div class="popup_anchor">
-        <div class="SSCloseButton popup_element clearfix" id="u4202"><!-- group -->
-         <div class="clearfix grpelem" id="u4203-4"><!-- content -->
-          <p>x</p>
-         </div>
-        </div>
-       </div>
-       <div class="popup_anchor" id="u4233-4popup">
-        <div class="SlideShowLabel SSSlideCount clearfix" id="u4233-4"><!-- content -->
-         <p>3 &#45; 3</p>
-        </div>
-       </div>
-       <div class="popup_anchor" id="u4200-4popup">
-        <div class="SSPreviousButton clearfix" id="u4200-4"><!-- content -->
-         <p>&lt;</p>
-        </div>
-       </div>
-       <div class="popup_anchor" id="u4234-4popup">
-        <div class="SSNextButton clearfix" id="u4234-4"><!-- content -->
-         <p>&gt;</p>
-        </div>
-       </div>
-      </div>
-      <div class="SlideShowWidget clearfix widget_invisible colelem" id="slideshowu3722"><!-- none box -->
-       <div class="popup_anchor" id="u3723popup">
-        <div class="SlideShowContentPanel rgba-background clearfix" id="u3723"><!-- stack box -->
-         <div class="SSSlide clip_frame grpelem" id="u3726"><!-- image -->
-          <img class="block ImageInclude" id="u3726_img" data-src="images/lirika1.jpg" src="images/blank.gif" alt="" data-width="500" data-height="500"/>
-         </div>
-         <div class="SSSlide invi clip_frame grpelem" id="u3878"><!-- image -->
-          <img class="block ImageInclude" id="u3878_img" data-src="images/lirika2.jpg" src="images/blank.gif" alt="" data-width="500" data-height="500"/>
-         </div>
-         <div class="SSSlide invi clip_frame grpelem" id="u3887"><!-- image -->
-          <img class="block ImageInclude" id="u3887_img" data-src="images/lirika3.jpg" src="images/blank.gif" alt="" data-width="500" data-height="500"/>
-         </div>
-         <div class="SSSlide invi clip_frame grpelem" id="u3896"><!-- image -->
-          <img class="block ImageInclude" id="u3896_img" data-src="images/lirika4.jpg" src="images/blank.gif" alt="" data-width="500" data-height="500"/>
-         </div>
-         <div class="SSSlide invi clip_frame grpelem" id="u3905"><!-- image -->
-          <img class="block ImageInclude" id="u3905_img" data-src="images/lirika5.jpg" src="images/blank.gif" alt="" data-width="500" data-height="500"/>
-         </div>
-        </div>
-       </div>
-       <div class="popup_anchor" id="u3730popup">
-        <div class="SSSlideLinks clearfix" id="u3730"><!-- horizontal-rows box -->
-        
-       
-        
-        
-         <div class="SSSlideLink    " ><!-- image -->
-          </div>
-        </div>
-       </div>
-       <div class="popup_anchor">
-        <div class="SSCloseButton popup_element clearfix" id="u3744"><!-- group -->
-         <div class="clearfix grpelem" id="u3745-4"><!-- content -->
-          <p>x</p>
-         </div>
-        </div>
-       </div>
-       <div class="popup_anchor" id="u3747-4popup">
-        <div class="SlideShowLabel SSSlideCount clearfix" id="u3747-4"><!-- content -->
-         <p>2 &#45; 5</p>
-        </div>
-       </div>
-       <div class="popup_anchor" id="u3738-4popup">
-        <div class="SSPreviousButton clearfix" id="u3738-4"><!-- content -->
-         <p>&lt;</p>
-        </div>
-       </div>
-       <div class="popup_anchor" id="u3737-4popup">
-        <div class="SSNextButton clearfix" id="u3737-4"><!-- content -->
-         <p>&gt;</p>
-        </div>
-       </div>
-      </div>
-     </div>
-     <div class="SlideShowWidget clearfix widget_invisible grpelem" id="slideshowu4040"><!-- none box -->
-      <div class="popup_anchor" id="u4083popup">
-       <div class="SlideShowContentPanel rgba-background clearfix" id="u4083"><!-- stack box -->
-        <div class="SSSlide clip_frame grpelem" id="u4090"><!-- image -->
-         <img class="block ImageInclude" id="u4090_img" data-src="images/otc1.jpg" src="images/blank.gif" alt="" data-width="500" data-height="500"/>
-        </div>
-        <div class="SSSlide invi clip_frame grpelem" id="u4131"><!-- image -->
-         <img class="block ImageInclude" id="u4131_img" data-src="images/otc2.jpg" src="images/blank.gif" alt="" data-width="500" data-height="500"/>
-        </div>
-        <div class="SSSlide invi clip_frame grpelem" id="u4140"><!-- image -->
-         <img class="block ImageInclude" id="u4140_img" data-src="images/otc3.jpg" src="images/blank.gif" alt="" data-width="500" data-height="500"/>
-        </div>
-        <div class="SSSlide invi clip_frame grpelem" id="u4149"><!-- image -->
-         <img class="block ImageInclude" id="u4149_img" data-src="images/otc4.jpg" src="images/blank.gif" alt="" data-width="500" data-height="500"/>
-        </div>
-        <div class="SSSlide invi clip_frame grpelem" id="u4158"><!-- image -->
-         <img class="block ImageInclude" id="u4158_img" data-src="images/otc5.jpg" src="images/blank.gif" alt="" data-width="500" data-height="500"/>
-        </div>
-       </div>
-      </div>
-      <div class="popup_anchor" id="u4042popup">
-       <div class="SSSlideLinks  " ><!-- horizontal-rows box -->
-       
-    
-        
-        <div class="SSSlideLink    " id=" "><!-- image -->
-        
+            </div>
         </div>
         
-       </div>
-      </div>
-      <div class="popup_anchor">
-       <div class="SSCloseButton popup_element clearfix" id="u4060"><!-- group -->
-        <div class="clearfix grpelem" id="u4061-4"><!-- content -->
-         <p>x</p>
+        <div class="copyright">
+            <p>HAMKA CAFÉ &copy; TODOS LOS DERECHOS RESERVADOS</p>
+            <a href="http://www.diggitalo.com" target="_blank">
+                <img src="images/nuevo%20logo1.png" alt="Diggitalo" width="110">
+            </a>
         </div>
-       </div>
-      </div>
-      <div class="popup_anchor" id="u4053-4popup">
-       <div class="SlideShowLabel SSSlideCount clearfix" id="u4053-4"><!-- content -->
-        <p>3 &#45; 5</p>
-       </div>
-      </div>
-      <div class="popup_anchor" id="u4082-4popup">
-       <div class="SSPreviousButton clearfix" id="u4082-4"><!-- content -->
-        <p>&lt;</p>
-       </div>
-      </div>
-      <div class="popup_anchor" id="u4081-4popup">
-       <div class="SSNextButton clearfix" id="u4081-4"><!-- content -->
-        <p>&gt;</p>
-       </div>
-      </div>
-     </div>
-    
-    
-    
-  
-     
-     
-     
-     <div class="clip_frame grpelem" id="u3952"><!-- image -->
-      </div>
-     <div class="clip_frame grpelem" id="u5612"><!-- image -->
-      </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="#" class="whatsapp-float" id="whatsappFloat">
+        <i class="fab fa-whatsapp"></i>
+        <span>WhatsApp</span>
+    </a>
+
+    <!-- PDF Viewer Modal -->
+    <div id="pdfModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <iframe id="pdfViewer"></iframe>
+            <div id="pdfControls"></div>
+        </div>
     </div>
-    <div class="clearfix colelem" id="pu3630-32"><!-- group -->
-      
- 
+
+    <!-- Image Overlay for Zoom -->
+    <div id="imageOverlay" class="image-overlay" style="display: none;">
+        <div class="overlay-content">
+            <span class="close-overlay">&times;</span>
+            <img id="zoomedImage" src="/placeholder.svg" alt="Zoomed Image">
+        </div>
     </div>
-    <div class="verticalspacer"></div>
-    <div class="clearfix colelem" id="pu299"><!-- group -->
-     <div class="browser_width grpelem" id="u299"><!-- group -->
-      <div class="clearfix" id="u299_align_to_page">
-       <div class="clip_frame grpelem" id="u307"><!-- image -->
-        <img class="block" id="u307_img" src="images/logo2%20blan.png" alt="" width="170" height="88"/>
-       </div>
-       <div class="clearfix grpelem" id="pu309-30"><!-- column -->
-        <div class="clearfix colelem" id="u309-30"><!-- content -->
-         <p id="u309-8"><span id="u309-5">​</span><span class="actAsInlineDiv normal_text" id="u5837"><!-- content --><span class="actAsDiv clip_frame excludeFromNormalFlow" id="u5838"><!-- image --><img id="u5838_img" src="images/icono%20ubi.png" alt="" width="20" height="27"/></span></span>&nbsp; Calle 16 Mz. M lote 18 Urb. Alameda de Ate 2da etapa - Santa Anita - Lima</p>
-         <p id="u309-9">&nbsp;</p>
-         <p id="u309-14"><span id="u309-10">​</span><span><span class="actAsInlineDiv normal_text" id="u2980"><!-- content --><span class="actAsDiv clip_frame excludeFromNormalFlow" id="u2977"><!-- image --><img id="u2977_img" src="images/icono%20men.png" alt="" width="25" height="19"/></span></span></span><span>&nbsp; </span>informes@hamkacafe.com</p>
-         <p id="u309-15">&nbsp;</p>
-         
-         <p id="u309-24"><span id="u309-21">​</span><span><span class="actAsInlineDiv normal_text" id="u2988"><!-- content --><span class="actAsDiv clip_frame excludeFromNormalFlow" id="u2985"><!-- image --><img id="u2985_img" src="images/icono%20cel.png" alt="" width="15" height="23"/></span></span></span><span>&nbsp; 950 272 331</span></p>
-         <p id="u309-28"><span id="u309-25">​</span><span><span class="actAsInlineDiv normal_text" id="u2992"><!-- content --><span class="actAsDiv clip_frame excludeFromNormalFlow" id="u2989"><!-- image --><img id="u2989_img" src="images/icono%20cel.png" alt="" width="15" height="23"/></span></span></span><span>&nbsp; 971 855 211</span></p>
-         <p id="u309-28"><span id="u309-25">​</span><span><span class="actAsInlineDiv normal_text" id="u2992"><!-- content --><span class="actAsDiv clip_frame excludeFromNormalFlow" id="u2989"><!-- image --><img id="u2989_img" src="images/icono%20cel.png" alt="" width="15" height="23"/></span></span></span><span>&nbsp; 01 5339193</span></p>
-        </div>
-        <div class="clearfix colelem" id="u350-9"><!-- content -->
-         <p id="u350-2">HAMKA CAFÉ</p>
-         <p id="u350-7"><span id="u350-3">​</span><span class="actAsInlineDiv normal_text" id="u369"><!-- content --><span class="actAsDiv clip_frame excludeFromNormalFlow" id="u363"><!-- image --><img id="u363_img" src="images/copy.png" alt="" width="12" height="12"/></span></span><span id="u350-5">&nbsp; </span><span id="u350-6">TODOS LOS DERECHOS RESERVADOS</span></p>
-        </div>
-       </div>
-       <div class="clearfix grpelem" id="ppu314-4"><!-- column -->
-        <div class="clearfix colelem" id="pu314-4"><!-- group -->
-         <a class="nonblock nontext clearfix grpelem" id="u314-4" href="index.html"><!-- content --><p>Inicio</p></a>
-         <a class="nonblock nontext clip_frame grpelem" id="u321" href="https://www.facebook.com/HAMKA-246234232400463/?ref=br_rs" target="_blank"><!-- image --><img class="block" id="u321_img" src="images/icono%20face.png" alt="" width="40" height="40"/></a>
-        </div>
-        <a class="nonblock nontext clearfix colelem" id="u316-4" href="nosotros.html"><!-- content --><p>Nosotros</p></a>
-        <a class="nonblock nontext MuseLinkActive clearfix colelem" id="u317-4" href="venta.html"><!-- content --><p>VENTA</p></a>
-        <a class="nonblock nontext clearfix colelem" id="u318-4" href="alquiler.html"><!-- content --><p>Alquiler</p></a>
-        <a class="nonblock nontext clearfix colelem" id="u319-4" href="contacto.html"><!-- content --><p>Contacto</p></a>
-        <a class="nonblock nontext clip_frame colelem" id="u357" href="http://www.diggitalo.com" target="_blank"><!-- image --><img class="block" id="u357_img" src="images/nuevo%20logo1.png" alt="" width="110" height="23"/></a>
-       </div>
-      </div>
-     </div>
-     <div class="grpelem" id="u349"><!-- simple frame --></div>
-    </div>
-   </div>
-  </div>
- 
-  
 
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileToggle = document.querySelector('.mobile-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            mobileToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+                mobileToggle.querySelector('i').classList.toggle('fa-bars');
+                mobileToggle.querySelector('i').classList.toggle('fa-times');
+            });
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        document.querySelectorAll(".cafe-action-button").forEach(button => {
-            if (button.textContent.trim() === "Solicitar Cotización") {
-                button.addEventListener("click", function (event) {
-                    event.preventDefault();
+            // Product Thumbnails
+            document.querySelectorAll('.product-thumbnail').forEach(thumbnail => {
+                thumbnail.addEventListener('click', function() {
+                    const mainImage = this.closest('.product-gallery').querySelector('.product-main-image img');
+                    mainImage.src = this.querySelector('img').src;
+                    
+                    // Remove active class from all thumbnails
+                    this.closest('.product-thumbnails').querySelectorAll('.product-thumbnail').forEach(thumb => {
+                        thumb.classList.remove('active');
+                    });
+                    
+                    // Add active class to clicked thumbnail
+                    this.classList.add('active');
+                });
+            });
 
-                    let productCard = this.closest(".cafe-product-card");
-                    let productName = productCard.querySelector(".cafe-product-title").textContent.trim();
+            // Image Zoom
+            document.querySelectorAll('.product-main-image').forEach(image => {
+                image.addEventListener('click', function() {
+                    const imgSrc = this.querySelector('img').src;
+                    const overlay = document.getElementById('imageOverlay');
+                    const zoomedImg = document.getElementById('zoomedImage');
+                    
+                    zoomedImg.src = imgSrc;
+                    overlay.style.display = 'flex';
+                });
+            });
 
-                    let message = `Hola, estoy interesado en solicitar una cotización para el producto: *${productName}*. ¿Podrían brindarme más información?`;
+            // Close Image Overlay
+            document.querySelector('.close-overlay').addEventListener('click', function() {
+                document.getElementById('imageOverlay').style.display = 'none';
+            });
 
-                    let phoneNumber = "51950272331";
-                    let whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            // PDF Viewer
+            document.querySelectorAll('.pdf-btn').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const pdfFiles = JSON.parse(this.dataset.pdfs);
+                    openPdfViewer(pdfFiles);
+                });
+            });
 
+            // Close PDF Modal
+            document.querySelector('.close-btn').addEventListener('click', function() {
+                document.getElementById('pdfModal').style.display = 'none';
+            });
+
+            // WhatsApp Quote Button
+            document.querySelectorAll('.quote-btn').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const productName = this.dataset.product;
+                    const message = `Hola, estoy interesado en solicitar una cotización para el producto: *${productName}*. ¿Podrían brindarme más información?`;
+                    const phoneNumber = "51950272331";
+                    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
                     window.open(whatsappUrl, "_blank");
                 });
+            });
+
+            // WhatsApp Float Button
+            document.getElementById('whatsappFloat').addEventListener('click', function(e) {
+                e.preventDefault();
+                const message = "Hola, estoy interesad@ en...";
+                const phoneNumber = "51950272331";
+                const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                window.open(whatsappUrl, "_blank");
+            });
+
+            // Function to open PDF viewer
+            function openPdfViewer(pdfFiles) {
+                const modal = document.getElementById("pdfModal");
+                const viewer = document.getElementById("pdfViewer");
+                const controls = document.getElementById("pdfControls");
+
+                if (pdfFiles.length === 0) return;
+
+                // Load the first PDF by default
+                viewer.src = pdfFiles[0];
+
+                // Clear previous controls
+                controls.innerHTML = "";
+
+                // If there's more than one PDF, create buttons to switch between documents
+                if (pdfFiles.length > 1) {
+                    pdfFiles.forEach((pdf, index) => {
+                        let btn = document.createElement("button");
+                        btn.textContent = "PDF " + (index + 1);
+                        btn.onclick = () => viewer.src = pdf;
+                        controls.appendChild(btn);
+                    });
+                }
+
+                // Show the modal
+                modal.style.display = "flex";
             }
-        });
-    });
-</script>
 
-
-<script>
- 
-document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll(".cafe-action-button-alt").forEach(button => {
-        button.addEventListener("click", function (event) {
-            event.preventDefault();
-            const productName = this.closest(".cafe-product-details").querySelector(".cafe-product-title").textContent.trim();
-            const files = productFiles[productName];
-
-            if (files.length === 1) {
-                // Si solo hay un archivo, descargar directamente
-                window.open(files[0], "_blank");
-            } else {
-                // Si hay varios archivos, mostrar un modal o lista
-                showFileSelectionModal(productName, files);
-            }
-        });
-    });
-});
-
-function showFileSelectionModal(productName, files) {
-    let modalContent = `<h3>Selecciona un archivo para descargar (${productName})</h3><ul>`;
-    files.forEach(file => {
-        modalContent += `<li><a href="${file}" target="_blank">${file.split("/").pop()}</a></li>`;
-    });
-    modalContent += "</ul>";
-    
-    const modal = document.createElement("div");
-    modal.innerHTML = `<div class="modal">${modalContent}<button onclick="this.parentElement.remove()">Cerrar</button></div>`;
-    document.body.appendChild(modal);
-}
-
-</script>
-
-
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll(".cafe-product-card").forEach((productCard) => {
-        const mainImage = productCard.querySelector(".cafe-product-main-image img");
-        const thumbnails = productCard.querySelectorAll(".cafe-product-thumbnail img");
-        const uniqueID = Math.random().toString(36).substr(2, 9);
-        mainImage.dataset.id = uniqueID;
-        
-        // Cambio de imagen al hacer clic en una miniatura
-        thumbnails.forEach((thumbnail) => {
-            thumbnail.addEventListener("click", function () {
-                mainImage.src = this.src;
-                productCard.querySelector(".cafe-product-thumbnail.active")?.classList.remove("active");
-                this.parentElement.classList.add("active");
+            // Close modals when clicking outside
+            window.addEventListener('click', function(e) {
+                const pdfModal = document.getElementById('pdfModal');
+                const imageOverlay = document.getElementById('imageOverlay');
+                
+                if (e.target === pdfModal) {
+                    pdfModal.style.display = 'none';
+                }
+                
+                if (e.target === imageOverlay) {
+                    imageOverlay.style.display = 'none';
+                }
             });
         });
-        
-        // Ampliar imagen al hacer clic en la imagen principal
-        mainImage.addEventListener("click", function () {
-            const overlay = document.createElement("div");
-            overlay.classList.add("image-overlay");
-            overlay.innerHTML = `<div class="overlay-content"><img src="${this.src}" alt="Expanded Image"><span class="close-btn">&times;</span></div>`;
-            document.body.appendChild(overlay);
-            
-            // Cerrar la imagen ampliada
-            overlay.querySelector(".close-btn").addEventListener("click", function () {
-                overlay.remove();
-            });
-        });
-    });
-});
-
-// CSS para la imagen ampliada (incluir en tu hoja de estilos)
-const style = document.createElement("style");
-style.innerHTML = `
-.image-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 100000;
-}
-.overlay-content {
-    position: relative;
-}
-.overlay-content img {
-    max-width: 90%;
-    max-height: 90vh;
-    border-radius: 10px;
-}
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    color: white;
-    font-size: 30px;
-    cursor: pointer;
-}
-`;
-document.head.appendChild(style);
-
-  </script>
-  <script>
-   class LandbotWhatsAppBtn {
-  constructor({ dialcode, phone, text }) {
-    this.dialcode = dialcode;
-    this.phone = phone;
-    this.text = text;
-  }
-
-  renderButton() {
-    let fontAwesome = document.createElement("script");
-    fontAwesome.setAttribute(
-      "src",
-      "https://kit.fontawesome.com/2640aa91b4.js"
-    );
-    document.body.appendChild(fontAwesome);
-
-    let roboto = document.createElement("link");
-    roboto.setAttribute(
-      "href",
-      "https://fonts.googleapis.com/css?family=Roboto&display=swap"
-    );
-    roboto.setAttribute("rel", "stylesheet");
-    document.body.appendChild(roboto);
-
-    let styles = document.createElement("link");
-    styles.setAttribute(
-      "href",
-      "https://static.landbot.io/whatsapp-widget/whatsapp-button-widget.css"
-    );
-    styles.setAttribute("rel", "stylesheet");
-    styles.setAttribute("type", "text/css");
-    document.body.appendChild(styles);
-
-    let root = document.createElement("div");
-    root.className = "WhatsAppButton__root";
-    root.setAttribute("style", "position: fixed; bottom: 10px; right: 20px;");
-    document.body.appendChild(root);
-
-    let button_root = document.createElement("a");
-    button_root.setAttribute(
-      "href",
-      `https://api.whatsapp.com/send?phone=${this.dialcode}${this.phone}&text=${this.text}`
-    );
-    button_root.setAttribute("style", "text-decoration: none");
-    button_root.setAttribute("target", "_blank");
-    root.appendChild(button_root);
-
-    let button = document.createElement("button");
-    button.setAttribute("class", "landbot-whatsapp__button");
-    button_root.appendChild(button);
-
-    let whatsappIcon = document.createElement("i");
-    whatsappIcon.setAttribute("class", "fab fa-whatsapp");
-    whatsappIcon.setAttribute("style", "font-size: 24px; margin-right: 5px");
-    button.appendChild(whatsappIcon);
-
-    let button_text = document.createElement("p");
-    button_text.setAttribute("style", "margin: 0");
-    button_text.innerText = "WhatsApp";
-    button.appendChild(button_text);
-
-    let poweredByButton = document.createElement("a");
-    poweredByButton.setAttribute(
-      "href",
-      "https://enniosousa.com.br/?utm_source=WhatsAppButton"
-    );
-    poweredByButton.setAttribute("class", "whatsapp__poweredBy");
-    poweredByButton.setAttribute("target", "_blank");
-     
-    root.appendChild(poweredByButton);
-  }
-}
-var whatsAppBtn = new LandbotWhatsAppBtn({
-  dialcode: "51",
-  phone: "950 272 331",
-  text: "Hola, estoy interesad@ en..."
-});
-whatsAppBtn.renderButton();
-
- </script>
-  <!-- JS includes -->
-  <script type="text/javascript">
-   if (document.location.protocol != 'https:') document.write('\x3Cscript src="http://musecdn.businesscatalyst.com/scripts/4.0/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
-</script>
-  <script type="text/javascript">
-   window.jQuery || document.write('\x3Cscript src="scripts/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
-</script>
-  <script src="scripts/museutils.js?4291592202" type="text/javascript"></script>
-  <script src="scripts/jquery.scrolleffects.js?4006931061" type="text/javascript"></script>
-  <script src="scripts/jquery.tobrowserwidth.js?3842421675" type="text/javascript"></script>
-  <script src="scripts/jquery.musepolyfill.bgsize.js?291134478" type="text/javascript"></script>
-  <script src="scripts/webpro.js?3903299128" type="text/javascript"></script>
-  <script src="scripts/musewpslideshow.js?138381373" type="text/javascript"></script>
-  <script src="scripts/jquery.museoverlay.js?4250894771" type="text/javascript"></script>
-  <script src="scripts/touchswipe.js?4156838003" type="text/javascript"></script>
-  <script src="scripts/jquery.watch.js?4068933136" type="text/javascript"></script>
-  <!-- Other scripts -->
-  <script type="text/javascript">
-   $(document).ready(function() { try {
-Muse.Utils.transformMarkupToFixBrowserProblemsPreInit();/* body */
-$('.browser_width').toBrowserWidth();/* browser width elements */
-Muse.Utils.prepHyperlinks(true);/* body */
-$('#u647').registerPositionScrollEffect([{"in":[-Infinity,0],"speed":[null,0]},{"in":[0,Infinity],"speed":[null,0]}]);/* scroll effect */
-$('#u648').registerPositionScrollEffect([{"in":[-Infinity,0],"speed":[0,0]},{"in":[0,Infinity],"speed":[0,0]}]);/* scroll effect */
-$('#u650').registerPositionScrollEffect([{"in":[-Infinity,0],"speed":[0,0]},{"in":[0,Infinity],"speed":[0,0]}]);/* scroll effect */
-$('#u747-4').registerPositionScrollEffect([{"in":[-Infinity,0],"speed":[0,0]},{"in":[0,Infinity],"speed":[0,0]}]);/* scroll effect */
-$('#u748-4').registerPositionScrollEffect([{"in":[-Infinity,0],"speed":[0,0]},{"in":[0,Infinity],"speed":[0,0]}]);/* scroll effect */
-$('#u749-4').registerPositionScrollEffect([{"in":[-Infinity,0],"speed":[0,0]},{"in":[0,Infinity],"speed":[0,0]}]);/* scroll effect */
-$('#u750-4').registerPositionScrollEffect([{"in":[-Infinity,0.05],"speed":[0,0]},{"in":[0.05,Infinity],"speed":[0,0]}]);/* scroll effect */
-$('#u751-4').registerPositionScrollEffect([{"in":[-Infinity,0.05],"speed":[0,0]},{"in":[0.05,Infinity],"speed":[0,0]}]);/* scroll effect */
-Muse.Utils.initWidget('#slideshowu4360', function(elem) { $(elem).data('widget', new WebPro.Widget.ContentSlideShow(elem, {autoPlay:false,displayInterval:3500,slideLinkStopsSlideShow:false,transitionStyle:'fading',lightboxEnabled_runtime:true,shuffle:false,transitionDuration:500,enableSwipe:true,fullScreen:false})); });/* #slideshowu4360 */
-Muse.Utils.initWidget('#slideshowu4198', function(elem) { $(elem).data('widget', new WebPro.Widget.ContentSlideShow(elem, {autoPlay:false,displayInterval:3500,slideLinkStopsSlideShow:false,transitionStyle:'fading',lightboxEnabled_runtime:true,shuffle:false,transitionDuration:500,enableSwipe:true,fullScreen:false})); });/* #slideshowu4198 */
-Muse.Utils.initWidget('#slideshowu3722', function(elem) { $(elem).data('widget', new WebPro.Widget.ContentSlideShow(elem, {autoPlay:false,displayInterval:3500,slideLinkStopsSlideShow:false,transitionStyle:'fading',lightboxEnabled_runtime:true,shuffle:false,transitionDuration:500,enableSwipe:true,fullScreen:false})); });/* #slideshowu3722 */
-Muse.Utils.initWidget('#slideshowu4040', function(elem) { $(elem).data('widget', new WebPro.Widget.ContentSlideShow(elem, {autoPlay:false,displayInterval:3500,slideLinkStopsSlideShow:false,transitionStyle:'fading',lightboxEnabled_runtime:true,shuffle:false,transitionDuration:500,enableSwipe:true,fullScreen:false})); });/* #slideshowu4040 */
-$('#u299').registerBackgroundPositionScrollEffect([{"in":[-Infinity,346],"speed":[0,0]},{"in":[346,Infinity],"speed":[0,0]}]);/* scroll effect */
-Muse.Utils.fullPage('#page');/* 100% height page */
-Muse.Utils.showWidgetsWhenReady();/* body */
-Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
-} catch(e) { Muse.Assert.fail('Error calling selector function:' + e); }});
-</script>
-   </body>
+    </script>
+</body>
 </html>
